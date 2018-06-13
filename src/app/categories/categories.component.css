@@ -67,3 +67,10 @@ body{
 a:hover{
     text-decoration: none;
 }
+
+.active{
+    background-color: white;
+    border: 1px solid red;
+    padding: 15px;
+    border-radius: 9px;
+}

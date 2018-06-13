@@ -15,12 +15,16 @@ import { PetsComponent } from './pets/pets.component';
 import { ServicesComponent } from './services/services.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { PropertiesComponent } from './properties/properties.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
 
 const routes:Routes=([
-  { path: '', component: CategoriesComponent},
+ 
+  { path: '', component: HomeComponent},
   { path: 'categories', component: CategoriesComponent,
 children : [
   {path : 'properties', component: PropertiesComponent},
@@ -52,7 +56,10 @@ children : [
     PetsComponent,
     ServicesComponent,
     JobsComponent,
-    PropertiesComponent
+    PropertiesComponent,
+    NavbarComponent,
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
