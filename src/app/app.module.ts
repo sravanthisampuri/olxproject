@@ -14,13 +14,16 @@ import { FashionComponent } from './fashion/fashion.component';
 import { PetsComponent } from './pets/pets.component';
 import { ServicesComponent } from './services/services.component';
 import { JobsComponent } from './jobs/jobs.component';
+import { PropertiesComponent } from './properties/properties.component';
 
 
 
 
 const routes:Routes=([
   { path: '', component: CategoriesComponent},
-  { path: 'properties', component: CategoriesComponent},
+  { path: 'categories', component: CategoriesComponent,
+children : [
+  {path : 'properties', component: PropertiesComponent},
   { path: 'cars', component: CarsComponent},
   { path: 'electronics', component: ElectronicsComponent},
   { path: 'furniture', component: FurnitureComponent},
@@ -31,8 +34,9 @@ const routes:Routes=([
   { path: 'fashion', component: FashionComponent},
   { path: 'services', component: ServicesComponent},
   { path: 'pets', component: PetsComponent}
-
-])
+]
+}
+ ])
 
 @NgModule({
   declarations: [
@@ -47,7 +51,8 @@ const routes:Routes=([
     FashionComponent,
     PetsComponent,
     ServicesComponent,
-    JobsComponent
+    JobsComponent,
+    PropertiesComponent
   ],
   imports: [
     BrowserModule,

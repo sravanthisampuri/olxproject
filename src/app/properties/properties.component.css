@@ -24,10 +24,8 @@ body{
 } */
 .list>li{
     list-style: none;
+    
     padding-top: 21px;
-}
-.list>li>a{
-    text-decoration: none;
 }
 
 .list>li>a:hover{
@@ -39,9 +37,9 @@ body{
     border-bottom: 1px solid lightblue;
     padding-bottom: 10px;
 }
-/* .li{
+.li{
     padding-top: 20px;
-} */
+}
 .anchor:hover{
     text-decoration: none;
     color: red;
