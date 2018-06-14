@@ -1,21 +1,17 @@
 <div class="container">
   <div class="outline">
     <div class="col-sm-12 left">
-      <div class="col-sm-3 background">
-        <ul class="list">
-          <li>
+      <div class="col-sm-3 sidebar">
+        <ul class="nav nav-sidebar">
+          <li class="main">
             Main categories
           </li>
-
-          <li class="line">
-            <a routerLink='/all'>All Ads</a>
+          <li class="active line">
+            <a routerLink="#">All Ads</a>
           </li>
-          <br>
-
           <li>
             <a routerLink='/categories/properties'>Properties</a>
           </li>
-
           <li>
             <a routerLink='/categories/cars'>Cars</a>
           </li>
@@ -32,10 +28,10 @@
             <a routerLink='/categories/mobiles'>Mobiles</a>
           </li>
           <li>
-            <a routerLink='/categories/books'>Books,Sports & Hobbies</a>
+            <a routerLink='/categories/bikes'>Bikes</a>
           </li>
           <li>
-            <a routerLink='/categories/bikes'>Bikes</a>
+            <a routerLink='/categories/books'>Books,Sports & Hobbies</a>
           </li>
           <li>
             <a routerLink='/categories/fashion'>Fashion</a>
@@ -46,16 +42,12 @@
           <li>
             <a routerLink='/categories/services'>Services</a>
           </li>
-
-
         </ul>
       </div>
-     
       <div>
-
         <router-outlet></router-outlet>
-        
-        </div>
+      </div>
+
     </div>
   </div>
 </div>
