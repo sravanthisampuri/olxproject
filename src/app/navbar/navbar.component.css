@@ -95,7 +95,7 @@ body{
     border-top: none; border-left: none; border-bottom: #999999; border-right: #999999;
  }
  .downbanner{
-    background-image: url("assets/images/backgroundlogo.png"); background-repeat: no-repeat; background-size: 100%; margin-top: 40px;border-bottom: 2px solid rgba(153, 153, 153, 0.05); height: 157px ! important;
+    background-image: url("/assets/images/backgroundlogo.png"); background-repeat: no-repeat; background-size: 100%; margin-top: 40px;border-bottom: 2px solid rgba(153, 153, 153, 0.05); height: 157px ! important;
  }
  .set-down-bannerimage{
   text-align: center;margin-bottom: 10px;border-bottom: 2px solid rgba(153, 153, 153, 0.05);height: 157px ! important;
