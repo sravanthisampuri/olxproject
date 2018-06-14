@@ -10,7 +10,10 @@ import {NgForm,FormControl,FormsModule} from '@angular/forms';
 export class SignupComponent implements OnInit {
   
 userdata={
-
+  conpassword:'',
+  name:'',
+  email:'',
+  password:''
 }
 public var: any;
   constructor(
