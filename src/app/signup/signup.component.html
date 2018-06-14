@@ -7,7 +7,7 @@
     <div class="card card-container">
       <h3 class="text-center">Create Account</h3>
       <p class="text-center">Get started with your free account</p>
-      <form #regForm='ngForm'>
+      <form #regForm='ngForm' (ngSubmit)="Register(regForm)">
 					<div class="form-group input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 						<input [(ngModel)]="userdata.name" name="name" minlength="5" class="form-control" placeholder="Full name" type="text"

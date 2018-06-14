@@ -129,6 +129,10 @@
 .forgot-password {
     color: rgb(104, 145, 162);
 }
+.register{
+    color: rgb(104, 145, 162);
+    padding-left: 75px;
+}
 
 .forgot-password:hover,
 .forgot-password:active,
@@ -152,5 +156,8 @@ background-color: #4e6cab;
 }
 .btn > a{
     color:#fff;
+    text-decoration: none;
+}
+a{
     text-decoration: none;
 }

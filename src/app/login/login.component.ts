@@ -31,7 +31,7 @@ loginUser(){
    else{
      if(this.udata.email == localStorage.getItem('email') && this.udata.password == localStorage.getItem('password'))
    {
-    this.route.navigate(['/profile'])
+    this.route.navigate([''])
    }
    else
    {
