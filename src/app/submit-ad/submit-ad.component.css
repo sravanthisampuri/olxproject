@@ -1,0 +1,390 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+* {
+    box-sizing: border-box;
+} 
+
+.container {
+    width: 1100px;
+    margin: auto;
+}
+.clearfix{
+    clear:both;
+}
+
+/* ================================== */
+/* customclasses */
+.padding10{
+    padding-left:45px;
+}
+    .font-wt{
+        font-weight:500;
+    }
+    .borderbot{
+        border-bottom:1px solid #e1e1e1;
+    }
+
+
+   
+
+
+
+
+
+
+
+
+/* ============================= */
+.navbar-brand img{
+    height: 80px;
+    width: 80px;
+    
+}
+.language{
+    color: #787878;
+    position: absolute;
+    right: 0px;
+    
+    background: #f7f8f9;
+    padding: 0px 12px;
+    border-radius: 0px 0px 5px 5px;
+}
+.select-lang {
+    display: inline-block;
+    zoom: 1;
+}
+
+.navbar{
+    width: 970px !important;
+}
+.break> :before {
+    content: "|";
+    color: #999999;
+    padding: 0 .4em 0 .2em;
+}
+.caption{
+    top: 50px;
+  
+    position: absolute;
+    font-size: 20px;
+    font-weight: normal;
+   
+}
+.navbar-right {
+   font-size:20px; 
+  position:relative;
+   top:40px;
+   margin-right:0
+
+}
+.nav>.myaccount>a:focus, .nav>.myaccount>a:hover{
+    background-color: transparent !important;
+    color:#2965be;
+}
+a:focus{
+    outline:0px;
+}
+.adSubmitForm{
+    margin:10px;
+}
+.adSubmitForm {
+  width:65%;
+    margin: 2% auto;
+    height: 950px;
+    border: solid 1px #e1e1e1;
+    border-radius: 4px;
+    
+}
+
+.adSubmitForm h4{
+    font-size:20px;
+    padding:2px 0px 5px 10px;
+    border-bottom:1px solid #e1e1e1;
+
+}
+.customwidth {
+    width:100%;
+    text-align: center;
+    padding:10px;
+    
+}
+
+.customwidth input{
+    width:55%;
+   margin-left:10px;
+}
+
+/* .customwidth.active{
+    background-color: red;
+} */
+.important-mark{
+    color:red;
+}
+.char-length-msg{
+    width:65%;
+    text-align:center;
+    font-size:11px;
+}
+.categorywidth{
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 54px;
+/* border-bottom:1px solid #e1e1e1; */
+}
+.categorywidth input{
+   margin-left:10px;
+}
+.adDescription{
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #e1e1e1;
+    padding: 10px 55px 0 0;
+    margin-bottom: 20px;
+   
+}
+.adDescription label{
+    position: relative;
+    bottom:50px;
+    padding-right: 10px;
+}
+.adDescription textarea{
+    height: 140px;
+    width: 400px;
+    resize: none;
+    margin-right: 50px;
+   
+}
+.adDescription .char-length-msg{
+    width:72%;
+}
+.gallery{
+    position: relative;
+    width:100%;
+    padding:0;
+    margin-top:20px
+}
+.img-section{
+    margin:0;  
+    border-bottom: 1px solid #e1e1e1;
+}
+.img-section:hover{
+    background-color:#ffa;
+  
+}
+.left-label{
+    padding:0;
+    text-align:right;
+}
+.left-label small{
+    display:inherit
+}
+.icon img{
+    width: 122px;
+    height: 60px;
+    
+   }
+   .photo-upload{
+    /* width: 87px;
+    height: 72px; */
+    display:inline-flex;
+    padding-left:20px;
+text-align: center;
+margin-bottom: 10px;
+    
+   }
+ .photo-upload img{
+    width: 35px;
+    height: 35px;
+   
+}
+.upload-img li {
+    list-style: none;
+    
+}
+.upload-img{
+    border:1px dashed #c5d7b5;
+    width: 87px;
+    height: 72px;
+    margin-right: 10px;
+    background: #e8f4de;
+}
+.upload-img img{
+    position: relative;
+    top: 18px;
+}
+#show-text{
+    font-size: 11px;
+    text-align: center;
+    margin-right: 50px;
+    margin:0 100px 20px 0;
+}
+.contrycode{
+    position: absolute;
+    top: 5px;
+    left: 171px;
+}
+.details{
+  padding:20px 0;
+  margin:10px;
+ 
+ 
+}
+.phninput, .nameinput,.cityinput{
+    margin-bottom: 20px
+}
+.details .nameinput input{
+    margin-left: 30px;
+    width:40%;
+}
+
+
+.details .phninput input{
+    margin-left:25px;
+    width:40%;
+}
+.details .phninput label{
+    margin-left:15px;
+}
+.details .cityinput input{
+    margin-left:25px;
+    width:40%;
+}
+.details .cityinput label{
+    margin-left: 38px;
+}
+.submitbtn{
+    padding:30px;
+      
+}
+.submitbtn button{
+    width:170px;
+    background-color:#fc793f;
+    padding:10px;
+    color:#fff;
+    font-size:20px;
+}
+/* .callcenterBox {
+    position: fixed;
+    right: 0px;
+    top: 50%;
+    background: #fff;
+    height: 133px;
+    border: 1px solid #dedede;
+    border-right: none;
+    padding-left: 35px;
+    margin-top: -66px;
+    -webkit-border-radius: 2px 0px 0px 2px;
+    border-radius: 2px 0px 0px 2px;
+    width: 0;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+    z-index: 10;
+}
+.callcenterBox .boxcontent {
+    width: 194px;
+    height: 111px;
+    padding-top: 22px;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+}
+.callcenterBox .boxcontent .number {
+    font-size: 15px;
+    margin: 6px 0px 3px;
+    font-weight: bold;
+}
+
+
+.block {
+    display: block;
+}
+
+.callcenterBox .boxcontent .number a {
+    color: #ff7700;
+}
+.color-1 {
+    color: #a0a0a0;
+}
+.callcenterBox a.slider {
+    width: 35px;
+    display: block;
+    height: 133px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:#2965be url('../../assets/images/chathelp.png') no-repeat 50% 35px;
+    color: #fff;
+    text-indent: -1000em;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+} */
+.helpbox{
+    position:fixed;
+    left:98%;
+    top:50%;
+    transform: translate(-50%,-50%);
+ 
+    
+}
+.helpbox .btn{
+    transform: rotate(-90deg);
+    font-size:22px;
+
+}
+
+.helpbox-text{
+    position: absolute;
+    bottom: -48px;
+    width: 150px;
+    height: 140px;
+    left: 94px;
+    border: 1px solid rgb(17, 16, 16);
+    
+
+}
+.helpbox-text1{
+    position: absolute;
+    bottom: -48px;
+    width: 150px;
+    height: 140px;
+    left: 94px;
+    border: 1px solid rgb(17, 16, 16);
+    
+
+}
+.box{
+    border:  1px solid blue;
+    border-radius: 50%;
+    background-color: blue;
+    width:25px;
+    height:25px;
+    color:white;
+   }
+   .shade{
+    border: 1px dashed #cbd2d7;
+    display: inline-block;
+    padding:30px;
+    background: #f4f4f4;
+    margin-right: 10px;
+   }
+   .photo-upload .shade:first-child {
+    background: #e8f4de;
+   }
+   .shade label{
+    border: 1px dotted grey;
+   }
+   .box span{
+    position: relative;
+    top: -2px;
+    font-size:20px;
+   }
+   .alert-info{
+   
+    color: #fa3909 !important;
+    background:none !important;
+    border: none !important;
+   }
+
