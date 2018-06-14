@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<div class="main-container">
+  <div class="container">
+    <br>
+    <div class="text-center"><h1>Registration</h1></div>
+    <br>
+    <div class="card card-container">
+      <h3 class="text-center">Create Account</h3>
+      <p class="text-center">Get started with your free account</p>
+      <form #regForm='ngForm'>
+					<div class="form-group input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+						<input [(ngModel)]="userdata.name" name="name" minlength="5" class="form-control" placeholder="Full name" type="text"
+						 #name="ngModel">
+					</div>
+					<div [hidden]="(name.dirty || name.untouched || name.invalid) " class="alert alert-info">Name is required
+          </div>
+          <div class="form-group input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+              <input [(ngModel)]="userdata.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #email="ngModel" name="email" class="form-control"
+              placeholder="Email address" type="email">
+            </div>
+              <div [hidden]="email.dirty ||email.untouched" class="alert alert-info">please fill this field</div>
+					    <div [hidden]="email.valid" class="alert alert-info">Please enter a valid email </div>
+          <div class="form-group input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+              <input name="number" class="form-control" placeholder="Phone number" type="text">
+          </div>
+          <!-- form-group end -->
+          <div ngModelGroup="password" #userPassword="ngModelGroup" minlength="8" required>
+          <div class="form-group input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <input id="password" [(ngModel)]="userdata.password" type="password" class="form-control" name="pword" placeholder="Password" minlength="8" required>
+          </div>
+          <div class="form-group input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <input id="password" [(ngModel)]="userdata.conpassword" type="password" class="form-control" name="conpwd" placeholder="confirm password" minlength="8" required>
+          </div>
+          <div *ngIf="(userPassword.invalid|| userPassword.value?.pword != userPassword.value?.conpwd) && (userPassword.touched)" class="alert alert-info">
+							<div *ngIf="userPassword.invalid; else nomatch">
+								Password must be more than 8 characters
+							</div>
+							<ng-template #nomatch>
+								Passwords don't match
+              </ng-template>
+              </div>
+            </div>
+            <div class="form-group">
+                <button (click)="signUp()" [disabled]="!regForm.form.valid" type="submit" class="btn btn-primary btn-block"> Create Account </button>
+              </div>
+              <p class="text-center">Have an account?
+                  <a routerLink="/login">Log In</a>
+              </p>
+              <div class="row">
+              <button class="btn col-xs-5 btn-facebook">
+                  <i class="fab fa-facebook-f"></i>   Login with facebook</button>
+                <button class="btn col-xs-5 btn-google">
+                  <i class="fab fa-google-plus-g"></i>  Login with Google</button>
+                  </div>
+        </form>
+
+    </div>
+  </div>
+</div>
