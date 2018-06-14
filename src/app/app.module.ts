@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import{RouterModule,Routes} from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { CategoriesComponent } from './categories/categories.component';
@@ -24,13 +26,15 @@ import { LoginComponent } from './login/login.component';
 
 
 
+
 const routes:Routes=([
  
   { path: '', component: HomeComponent},
   {path:"signup",component:SignupComponent},
   {path:"login",component:LoginComponent},
   { path: 'categories', component: CategoriesComponent,
-children : [
+  
+  children : [
   {path : 'properties', component: PropertiesComponent},
   { path: 'cars', component: CarsComponent},
   { path: 'electronics', component: ElectronicsComponent},
@@ -69,6 +73,7 @@ children : [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(routes)
 
   ],
