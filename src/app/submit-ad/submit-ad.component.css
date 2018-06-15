@@ -25,7 +25,10 @@ body {
     .borderbot{
         border-bottom:1px solid #e1e1e1;
     }
-
+.marg-bot{
+    margin-bottom: 20px;
+    padding: 10px;
+}
 
    
 
@@ -369,12 +372,14 @@ margin-bottom: 10px;
     padding:30px;
     background: #f4f4f4;
     margin-right: 10px;
+    cursor: pointer;
    }
    .photo-upload .shade:first-child {
     background: #e8f4de;
    }
    .shade label{
     border: 1px dotted grey;
+    cursor: pointer;
    }
    .box span{
     position: relative;
@@ -387,4 +392,37 @@ margin-bottom: 10px;
     background:none !important;
     border: none !important;
    }
+   table{
+    border-collapse: collapse;
+ }
+ .setting-rows{
+    width: 24%;border-color: #999999; border-left:white; border-top: white; padding: 10px 5px;
+ }
+ .setting-rows a{
+    text-decoration: none;
+ }
+ .setting-borders{
+    text-align: center;  padding:20px 0px;
+ 
+ }
+ .setting-borders td{
+    vertical-align: top;
+ }
+ 
+ .setgif{
+    /* float: right ! important; */
+    text-align: right;
+    padding: 10px  15px 0px 5px;
+ }
+ .icongrid>tr>td:nth-child(1){
+    border-top: none; border-left: none; border-bottom: #999999; border-right: #999999;
+ }
+.modal-content{
+    height: 350px;
+    width: 750px !important;
+ 
+ }
+
+
+ 
 
