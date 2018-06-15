@@ -5,9 +5,9 @@
 
             <h1 style="text-align:center">LOGIN</h1>
             <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
-            <p id="profile-name" class="profile-name-card"></p>
+            
             <form class="form-signin">
-                <span id="reauth-email" class="reauth-email"></span>
+                
                 <input type="email" [(ngModel)]="loginData.email" #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="email"
                     id="inputEmail" class="form-control" placeholder="Email address">
                 <div [hidden]="email.dirty ||email.untouched" class="alert alert-info">please fill this field</div>
