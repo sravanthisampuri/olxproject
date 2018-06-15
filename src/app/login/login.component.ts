@@ -8,9 +8,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 loginData={
-  password:'' ,
-  email:''
-
+  password:'',
+  name:''
   
 
 };
