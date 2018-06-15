@@ -32,7 +32,7 @@ titlelength=70
 public msg;
 public tweetmsg:any;
 characterleft=this.maxlength;
-charactersleft=this.titlelength
+charactersleft=this.titlelength;
 
 count(tweetmsg){
   tweetmsg=this.log.description.length;
