@@ -44,10 +44,7 @@ body{
     text-decoration: none;
     color: red;
 }
-.panel-default {
-    border-color:white;
-    background-color: #FBFAAE;
-}
+
 .top{
     margin-top: 18px;
 }
