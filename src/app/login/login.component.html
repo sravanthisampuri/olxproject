@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<div class="main-container">
+    <div class="container">
+        <div class="card card-container">
+
+            <h1 style="text-align:center">LOGIN</h1>
+            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="email" [(ngModel)]="loginData.email" #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="email"
+                    id="inputEmail" class="form-control" placeholder="Email address">
+                <div [hidden]="email.dirty ||email.untouched" class="alert alert-info">please fill this field</div>
+                <div [hidden]="email.valid" class="alert alert-info">Please enter a valid email </div>
+                <input type="password" [(ngModel)]="loginData.password" name="password" id="inputPassword" class="form-control" placeholder="Password">
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button (click)="loginUser()" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            </form>
+            <!-- /form -->
+            <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>
+            <a routerLink='/signup' class="register">Register</a>
+
+
+            <button class="btn btn-block btn-facebook">
+                <a href="">
+                    <i class="fab fa-facebook-f"></i>   Login with facebook</a>
+            </button>
+            <button class="btn btn-block btn-google">
+                <a href="">
+                    <i class="fab fa-google-plus-g"></i>  Login with Google</a>
+            </button>
+        </div>
+        <!-- /card-container -->
+    </div>
+</div>
+<!-- /container -->

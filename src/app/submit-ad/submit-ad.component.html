@@ -1,0 +1,227 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <header>
+        <nav class="navbar ">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+              <img src="/assets/images/olx-icon.png">
+            </a>
+            <div class="language">
+              <span>Select Language</span>
+              <ul class="select-lang ">
+                <li class="select-lang ">
+                  <span>
+                    English
+                  </span>
+
+                </li>
+                <li class="select-lang break">
+                  <span>
+                    Hindi
+                  </span>
+
+                </li>
+              </ul>
+
+            </div>
+            <span class="caption">India's Largest Marketplace</span>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="myaccount">
+              <a href="#">
+                <span class="glyphicon glyphicon-user"></span>
+                <span>
+                  <strong>My Account</strong>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </div>
+</div>
+<section>
+  <div class="conatiner">
+    <div class="row">
+      <div class="adSubmitForm">
+        <form class="form-inline" (ngSubmit)="onSubmit(f)" #f='ngForm'>
+          <h4>Submit a Free Classified Ad</h4>
+          <div class="customwidth form-group active">
+            <label for="title" class="font-wt">Ad Title
+              <span class="important-mark">
+                *
+              </span>
+            </label>
+
+            <input type="text" class="form-control" id="title" (keyup)="counttitle(x)" name="title" [(ngModel)]="log.title" #title="ngModel">
+            <p class="char-length-msg">
+              <b>{{charactersleft}}</b> characters left</p>
+              <div [hidden]="title.dirty || title.untouched" class=" alert-info">This field is manditory please enter title</div>
+              
+          </div>
+
+          <div class="categorywidth form-group">
+            <label class="font-wt">Category
+              <span class="important-mark">
+                *
+              </span>
+            </label>
+
+            <input type="text" class="form-control" id="category" name="category" [(ngModel)]="log.category" #category="ngModel">
+           
+            <a href="#">
+              <img src="/assets/images/category.png">
+            </a>
+            <div [hidden]="category.dirty || category.untouched" class=" alert-info">This field is manditory please enter category</div>
+            
+          </div>
+          <div class="adDescription">
+            <label class="font-wt">Ad Description
+              <span class="important-mark">
+                *
+              </span>
+            </label>
+            <textarea class="form-control" name="description" (keyup)="count(msg)" placeholder="Include the brand,model,age and any included accessories"
+              [(ngModel)]="log.description" #description="ngModel"></textarea>
+
+
+            <p class="char-length-msg">
+              <b>{{characterleft}}
+              </b> characters left</p>
+              <div [hidden]="description.dirty || description.untouched" class=" alert-info">This field is manditory please enter description</div>
+              
+          </div>
+          <div class="row img-section">
+            <div class="gallery col-xs-12">
+              <div class="left-label col-xs-3">
+                <label for="photos">Upload Photos</label>(click)="openLg(content)
+                <small>Ads with photos sell faster</small>
+                <span class="icon"></span>
+                <img src="/assets/images/gallery.png">
+
+              </div>
+              <div class="photo-upload col-xs-9">
+                  <div class="shade">
+                      <label for ='plus'  class="box" ><span>+</span></label>
+                      <input type ="file" id="plus" style="display:none">
+                  </div>
+                  <div class="shade">
+                      <label for ='plus'  class="box" ><span>+</span></label>
+                      <input type ="file" id="plus" style="display:none">
+                  </div>
+                  <div class="shade">
+                      <label for ='plus'  class="box" ><span>+</span></label>
+                      <input type ="file" id="plus" style="display:none">
+                  </div>
+                  <div class="shade">
+                      <label for ='plus'  class="box" ><span>+</span></label>
+                      <input type ="file" id="plus" style="display:none">
+                  </div>
+
+                          </div>
+
+            </div>
+            <div>
+              <p id="show-text">If you have problems with flash please use
+                <a href="#">simpler form</a>
+              </p>
+            </div>
+          </div>
+          <div class="details">
+            <div class="form-group col-sm-offset-2 col-sm-10 nameinput">
+              <label for="name">Name
+                <span class="important-mark">
+                  *
+                </span>
+              </label>
+              <input  [(ngModel)]="log.name" #name='ngModel' name="fullname" id="name" type="text" class="form-control"
+               > 
+              <div [hidden]="name.dirty || name.untouched" class=" alert-info">This field is manditory please enter name</div>
+              
+            </div>
+            <div class="form-group col-sm-offset-1 col-sm-10 phninput">
+              <label for="phnnum">Phone Number
+                <span class="important-mark">
+                  *
+                </span>
+              </label>
+              <input  [(ngModel)]="log.phnnum" #phnnum='ngModel' name="phonenmber" id="phnnum" type="text" class="form-control"> 
+              <div [hidden]="phnnum.dirty || phnnum.untouched" class=" alert-info">This field is manditory please mobile number</div>
+              
+            </div>
+            <div class="form-group col-sm-offset-1 col-sm-10 cityinput">
+              <label for="city">Enter a city
+                <span class="important-mark">
+                  *
+                </span>
+              </label>
+              <input  [(ngModel)]="log.city" #city='ngModel' name="cityname" id="city" type="text" class="form-control"> 
+              <div [hidden]="city.dirty || city.untouched" class=" alert-info">This field is manditory please enter the city</div>
+              
+            </div>
+            
+<!-- 
+            <div class="form-group col-sm-offset-1 col-sm-10 phninput">
+              <label for="phnnum">Phone Number
+                <span class="important-mark">
+                  *
+                </span>
+              </label>
+              <span class="contrycode">+91
+              </span>
+              <input id="phnnum" type="text" class="form-control" [(ngModel)]="log.phnnum" #phnnum1='ngModel'>
+              <div [hidden]="phnnum.dirty || phnnum.untouched" class="alert-info">This field is manditory please enter mobile number</div>
+              
+            </div>
+            
+        
+
+            <div class="form-group col-sm-offset-1 col-sm-10 cityinput">
+              <label for="city">Enter a city
+                <span class="important-mark">
+                  *
+                </span>
+              </label>
+              <input id="city" type="text" class="form-control" [(ngModel)]="log.city" #city1='ngModel'>
+              <div [hidden]="city.dirty || city.untouched" class=" alert-info">This field is manditory please enter city</div>
+              
+            </div> -->
+   
+            <div class="col-sm-12 borderbot  text-center">
+              <p class="padding10">
+                By clicking 'Submit' you agree to our
+                <a href="#">Terms of Use </a>&
+                <a>Posting Rules</a>
+              </p>
+            </div>
+
+          </div>
+          <div class="clearfix"></div>
+          <div class="submitbtn">
+            <button class="btn btn-default pull-right">Submit</button>
+          </div>
+         
+        
+        </form>
+       
+         
+      
+      </div>
+    </div>
+  </div>
+
+  <div class="helpbox">
+    <button class="btn btn-primary" ><b>Need help?</b></button>
+    <div class="helpbox-text text-center" *ngIf="show">
+      <p>Need help?</p>
+      <p><b>call us at</b></p>
+      <span><a href="tel:1800-103-3333" id="callTollFree">1800-103-3333</a></span>
+      <p >(10am - 7pm all 7 days)</p>
+    </div>
+
+
+  </div>
+ 
+</section> 

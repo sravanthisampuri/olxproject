@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import{RouterModule,Routes} from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { CategoriesComponent } from './categories/categories.component';
@@ -14,13 +16,27 @@ import { FashionComponent } from './fashion/fashion.component';
 import { PetsComponent } from './pets/pets.component';
 import { ServicesComponent } from './services/services.component';
 import { JobsComponent } from './jobs/jobs.component';
+import { PropertiesComponent } from './properties/properties.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
+import { SubmitAdComponent } from './submit-ad/submit-ad.component';
+
 
 
 
 
 const routes:Routes=([
-  { path: '', component: CategoriesComponent},
-  { path: 'properties', component: CategoriesComponent},
+ 
+  { path: '', component: HomeComponent},
+  {path:"signup",component:SignupComponent},
+  {path:"login",component:LoginComponent},
+  { path:"submit-ad",component:SubmitAdComponent},
+  { path: 'categories', component: CategoriesComponent,
+children : [
+  {path : 'properties', component: PropertiesComponent},
   { path: 'cars', component: CarsComponent},
   { path: 'electronics', component: ElectronicsComponent},
   { path: 'furniture', component: FurnitureComponent},
@@ -31,8 +47,9 @@ const routes:Routes=([
   { path: 'fashion', component: FashionComponent},
   { path: 'services', component: ServicesComponent},
   { path: 'pets', component: PetsComponent}
-
-])
+]
+}
+ ])
 
 @NgModule({
   declarations: [
@@ -47,10 +64,18 @@ const routes:Routes=([
     FashionComponent,
     PetsComponent,
     ServicesComponent,
-    JobsComponent
+    JobsComponent,
+    PropertiesComponent,
+    NavbarComponent,
+    HomeComponent,
+    FooterComponent,
+    SignupComponent,
+    LoginComponent,
+    SubmitAdComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(routes)
 
   ],

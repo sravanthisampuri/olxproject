@@ -6,14 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./properties.component.css']
 })
 export class PropertiesComponent implements OnInit {
-  classFocused:any;
   constructor() { }
 
   ngOnInit() {
-  }
-
-  focused(){
-    this.classFocused = "active";
   }
 
 }

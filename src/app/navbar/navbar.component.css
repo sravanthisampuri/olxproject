@@ -1,0 +1,107 @@
+body{
+    padding: 0px; margin: auto;
+ }
+ h1,h2,h3,h4,div,ul,li,nav,footer,section{
+    margin: auto; padding: 0px;
+ }
+ .clear{
+    clear: both;
+ }
+ .nav-settings{
+    padding-top: 5px;
+ }
+ .matter-setting{
+    text-align: left;padding-right: 25px;padding-top: 45px;font-size: 20px;font-weight: normal;line-height: 20px;
+ }
+ .lang-selector{
+    color: #787878; right: 0px; top: 0px;line-height: 10px;background: #f7f8f9;padding:10px; border-radius: 0px 0px 5px 5px;float: right !important;
+ }
+ .small{
+    font-size: 15px !important;font-weight: 200;
+ }
+ .video-set{
+    text-align: center;
+ }
+ .marginslanguage{
+    margin-right: 5px !important;
+ }
+ .set-ul{
+    list-style: none;float: right;
+ }
+ .set-ul>::before{
+    content: "|"; color: #999999;padding: 0 .4em 0 .2em;
+ }
+ .set-list{
+    display: inline-block; zoom: 1;
+ }
+ .addingaccount{
+    float: right !important;padding-right: 0px !important;
+ }
+ .adding-account{
+    list-style: none;padding-top: 10px; float: right;
+ }
+ .adding-account>li{
+    display: inline-block; padding: 0px 0px 0px 25px;
+ }
+ .adding-account>li>a{
+    text-decoration:none;
+ }
+ .adding-account>li:nth-child(2){
+    padding: 0px;
+ }
+ .formdetails{
+    background-color: rgba(49, 112, 143, 0.32);padding: 20px 0px; border-radius: 8px;
+ }
+ .input-type{
+    padding: 5px 5px 5px 10px ;border-radius: 5px; margin-left: 5px;
+ }
+ .input-add-search{
+    width: 65%; padding: 5px 5px 5px 10px ;border-radius: 5px;margin-left: 5px;
+ }
+ .search-button{
+    height: 35px;
+    width: 10%;
+    background-color: blue;
+    margin-left: 10px;
+    padding: 0px;
+    border: 2px solid white;
+ }
+ .banner-image{
+    background-color: black; height: 300px;margin:10px 0px;
+ }
+ table{
+    border-collapse: collapse;
+ }
+ .setting-rows{
+    width: 24%;border-color: #999999; border-left:white; border-top: white; padding: 10px 5px;
+ }
+ .setting-rows a{
+    text-decoration: none;
+ }
+ .setting-borders{
+    text-align: center;  padding:20px 0px;
+ 
+ }
+ .setting-borders td{
+    vertical-align: top;
+ }
+ 
+ .setgif{
+    /* float: right ! important; */
+    text-align: right;
+    padding: 10px  15px 0px 5px;
+ }
+ .icongrid>tr>td:nth-child(1){
+    border-top: none; border-left: none; border-bottom: #999999; border-right: #999999;
+ }
+ .downbanner{
+    background-image: url("/assets/images/backgroundlogo.png");
+    background-repeat: no-repeat; 
+    background-size: 100%; 
+    margin-top: 40px;
+    border-bottom: 2px solid rgba(153, 153, 153, 0.05); 
+    height: 157px ! important;
+ }
+ .set-down-bannerimage{
+  text-align: center;margin-bottom: 10px;border-bottom: 2px solid rgba(153, 153, 153, 0.05);height: 157px ! important;
+ }

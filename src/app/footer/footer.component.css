@@ -1,0 +1,30 @@
+.downbanner{
+    background-image: url("/assets/images/backgroundlogo.png");
+    background-repeat: no-repeat; 
+    background-size: 100%; 
+    margin-top: 40px;
+    border-bottom: 2px solid rgba(153, 153, 153, 0.05);
+    height: 157px ! important;
+ }
+ .set-down-bannerimage{
+  text-align: center;margin-bottom: 10px;border-bottom: 2px solid rgba(153, 153, 153, 0.05);height: 157px ! important;
+ }
+.margin{
+    margin: 0px 0px 0px 70px;
+}
+a{
+    color: #414141;
+    text-decoration: none;
+}
+a:hover{
+    color: orange;
+    
+}
+
+.mar{
+    text-align: center;
+    color: #414141;
+}
+footer{
+    margin-top: 15px;
+}
