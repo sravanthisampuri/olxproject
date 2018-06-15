@@ -1,47 +1,3 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <header>
-        <nav class="navbar ">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-              <img src="/assets/images/olx-icon.png">
-            </a>
-            <div class="language">
-              <span>Select Language</span>
-              <ul class="select-lang ">
-                <li class="select-lang ">
-                  <span>
-                    English
-                  </span>
-
-                </li>
-                <li class="select-lang break">
-                  <span>
-                    Hindi
-                  </span>
-
-                </li>
-              </ul>
-
-            </div>
-            <span class="caption">India's Largest Marketplace</span>
-          </div>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="myaccount">
-              <a href="#">
-                <span class="glyphicon glyphicon-user"></span>
-                <span>
-                  <strong>My Account</strong>
-                </span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </div>
-  </div>
-</div>
 <section>
   <div class="conatiner">
     <div class="row">
@@ -58,24 +14,25 @@
             <input type="text" class="form-control" id="title" (keyup)="counttitle(x)" name="title" [(ngModel)]="log.title" #title="ngModel">
             <p class="char-length-msg">
               <b>{{charactersleft}}</b> characters left</p>
-              <div [hidden]="title.dirty || title.untouched" class=" alert-info">This field is manditory please enter title</div>
-              
+            <div [hidden]="title.dirty || title.untouched" class=" alert-info">This field is manditory please enter title</div>
+
           </div>
 
-          <div class="categorywidth form-group">
+          <div class="categorywidth form-group" (click)="openModal(template)">
             <label class="font-wt">Category
               <span class="important-mark">
                 *
               </span>
             </label>
 
-            <input type="text" class="form-control" (click)="openModal(template)" id="category" name="category" [(ngModel)]="log.category" #category="ngModel">
-           
-            <a href="#">
-              <img src="/assets/images/category.png">
-            </a>
+            <input type="text" class="form-control"  id="category" name="category" [(ngModel)]="log.category"
+              #category="ngModel">
+
+            <label for="categories">
+              <img src="/assets/images/category-icon.png" id="categories">
+            </label>
             <div [hidden]="category.dirty || category.untouched" class=" alert-info">This field is manditory please enter category</div>
-            
+
           </div>
           <div class="adDescription">
             <label class="font-wt">Ad Description
@@ -90,37 +47,45 @@
             <p class="char-length-msg">
               <b>{{characterleft}}
               </b> characters left</p>
-              <div [hidden]="description.dirty || description.untouched" class=" alert-info">This field is manditory please enter description</div>
-              
+            <div [hidden]="description.dirty || description.untouched" class=" alert-info">This field is manditory please enter description</div>
+
           </div>
           <div class="row img-section">
             <div class="gallery col-xs-12">
               <div class="left-label col-xs-3">
-                <label for="photos">Upload Photos</label>(click)="openLg(content)
+                <label for="photos">Upload Photos</label>
                 <small>Ads with photos sell faster</small>
                 <span class="icon"></span>
                 <img src="/assets/images/gallery.png">
 
               </div>
               <div class="photo-upload col-xs-9">
-                  <div class="shade">
-                      <label for ='plus'  class="box" ><span>+</span></label>
-                      <input type ="file" id="plus" style="display:none">
-                  </div>
-                  <div class="shade">
-                      <label for ='plus'  class="box" ><span>+</span></label>
-                      <input type ="file" id="plus" style="display:none">
-                  </div>
-                  <div class="shade">
-                      <label for ='plus'  class="box" ><span>+</span></label>
-                      <input type ="file" id="plus" style="display:none">
-                  </div>
-                  <div class="shade">
-                      <label for ='plus'  class="box" ><span>+</span></label>
-                      <input type ="file" id="plus" style="display:none">
-                  </div>
+                <div class="shade">
+                  <label for='plus' class="box">
+                    <span>+</span>
+                  </label>
+                  <input type="file" id="plus" style="display:none">
+                </div>
+                <div class="shade">
+                  <label for='plus' class="box">
+                    <span>+</span>
+                  </label>
+                  <input type="file" id="plus" style="display:none">
+                </div>
+                <div class="shade">
+                  <label for='plus' class="box">
+                    <span>+</span>
+                  </label>
+                  <input type="file" id="plus" style="display:none">
+                </div>
+                <div class="shade">
+                  <label for='plus' class="box">
+                    <span>+</span>
+                  </label>
+                  <input type="file" id="plus" style="display:none">
+                </div>
 
-                          </div>
+              </div>
 
             </div>
             <div>
@@ -136,10 +101,9 @@
                   *
                 </span>
               </label>
-              <input  [(ngModel)]="log.name" #name='ngModel' name="fullname" id="name" type="text" class="form-control"
-               > 
+              <input [(ngModel)]="log.name" #name='ngModel' name="fullname" id="name" type="text" class="form-control">
               <div [hidden]="name.dirty || name.untouched" class=" alert-info">This field is manditory please enter name</div>
-              
+
             </div>
             <div class="form-group col-sm-offset-1 col-sm-10 phninput">
               <label for="phnnum">Phone Number
@@ -147,9 +111,9 @@
                   *
                 </span>
               </label>
-              <input  [(ngModel)]="log.phnnum" #phnnum='ngModel' name="phonenmber" id="phnnum" type="text" class="form-control"> 
+              <input [(ngModel)]="log.phnnum" #phnnum='ngModel' name="phonenmber" id="phnnum" type="text" class="form-control">
               <div [hidden]="phnnum.dirty || phnnum.untouched" class=" alert-info">This field is manditory please mobile number</div>
-              
+
             </div>
             <div class="form-group col-sm-offset-1 col-sm-10 cityinput">
               <label for="city">Enter a city
@@ -157,12 +121,12 @@
                   *
                 </span>
               </label>
-              <input  [(ngModel)]="log.city" #city='ngModel' name="cityname" id="city" type="text" class="form-control"> 
+              <input [(ngModel)]="log.city" #city='ngModel' name="cityname" id="city" type="text" class="form-control">
               <div [hidden]="city.dirty || city.untouched" class=" alert-info">This field is manditory please enter the city</div>
-              
+
             </div>
-            
-<!-- 
+
+            <!-- 
             <div class="form-group col-sm-offset-1 col-sm-10 phninput">
               <label for="phnnum">Phone Number
                 <span class="important-mark">
@@ -188,7 +152,7 @@
               <div [hidden]="city.dirty || city.untouched" class=" alert-info">This field is manditory please enter city</div>
               
             </div> -->
-   
+
             <div class="col-sm-12 borderbot  text-center">
               <p class="padding10">
                 By clicking 'Submit' you agree to our
@@ -202,39 +166,160 @@
           <div class="submitbtn">
             <button class="btn btn-default pull-right">Submit</button>
           </div>
-         
-        
+
+
         </form>
-       
-         
-      
+
+
+
       </div>
     </div>
   </div>
 
   <div class="helpbox">
-    <button class="btn btn-primary" ><b>Need help?</b></button>
+    <button class="btn btn-primary">
+      <b>Need help?</b>
+    </button>
     <div class="helpbox-text text-center" *ngIf="show">
       <p>Need help?</p>
-      <p><b>call us at</b></p>
-      <span><a href="tel:1800-103-3333" id="callTollFree">1800-103-3333</a></span>
-      <p >(10am - 7pm all 7 days)</p>
+      <p>
+        <b>call us at</b>
+      </p>
+      <span>
+        <a href="tel:1800-103-3333" id="callTollFree">1800-103-3333</a>
+      </span>
+      <p>(10am - 7pm all 7 days)</p>
     </div>
 
 
   </div>
- 
-</section> 
+
+</section>
 
 
 <ng-template #template>
+  <div class="modal-content">
   <div class="modal-header">
-    <h4 class="modal-title pull-left">Modal</h4>
+    <h4 class="modal-title pull-left">select category</h4>
     <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
-    This is a modal.
+    <div class="col-xs-12">
+      <div class="col-xs-2 marg-bot">
+        <a routerLinkActive="active-link" routerLink='/categories/properties'>
+          <div>
+            <img src="assets/images/home.png" width="60%" alt="home-image">
+          </div>
+          <div>
+            <span>Properties</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-2 marg-bot">
+          <a routerLinkActive="active-link" routerLink="/categories/cars">
+            <div>
+              <img src="assets/images/car.png" width="60%" alt="car-image">
+            </div>
+            <div>
+              <span>Cars</span>
+            </div>
+          </a>
+      </div>
+      <div class="col-xs-2 marg-bot">
+          <a routerLinkActive="active-link" routerLink="/categories/electronics">
+            <div>
+              <img src="assets/images/electronics.png" width="60%" alt="electronics-image">
+            </div>
+            <div>
+              <span>Electronics & Applicances</span>
+            </div>
+          </a>
+      </div>
+      <div class="col-xs-2 marg-bot">
+          <a routerLinkActive="active-link" routerLink="/categories/furniture">
+            <div>
+              <img src="assets/images/furniture.png" width="60%" alt="furniture-image">
+            </div>
+            <div>
+              <span>Furniture</span>
+            </div>
+          </a>
+      </div>
+      <div class="col-xs-2 marg-bot">
+          <a routerLinkActive="active-link" routerLink="/categories/jobs">
+            <div>
+              <img src="assets/images/jobs.png" width="60%" alt="job-image">
+            </div>
+            <div>
+              <span>Jobs</span>
+            </div>
+          </a>
+      </div>
+      <div class="col-xs-2 marg-bot">
+          <a routerLinkActive="active-link" routerLink="/categories/mobiles">
+            <div>
+              <img src="assets/images/mobiles.png" width="60%" alt="mobiles-image">
+            </div>
+            <div>
+              <span>Mobiles</span>
+            </div>
+          </a>
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <div class="col-xs-2 marg-bot">
+          <a routerLinkActive="active-link" routerLink="/categories/bikes">
+            <div>
+              <img src="assets/images/bikes.png" width="60%" alt="bikes-image">
+            </div>
+            <div>
+              <span>Bikes</span>
+            </div>
+          </a>
+      </div>
+      <div class="col-xs-2 marg-bot">
+          <a routerLinkActive="active-link" routerLink="/categories/books">
+            <div>
+              <img src="assets/images/books-sports.png" width="60%" alt="books-image">
+            </div>
+            <div>
+              <span>Books,Sports & Hobbies</span>
+            </div>
+          </a>
+      </div>
+      <div class="col-xs-2 marg-bot">
+          <a routerLinkActive="active-link" routerLink="/categories/fashion">
+            <div>
+              <img src="assets/images/fashion.png" width="60%" alt="fashion-image">
+            </div>
+            <div>
+              <span>Fashion</span>
+            </div>
+          </a>
+      </div>
+      <div class="col-xs-2 marg-bot">
+          <a routerLinkActive="active-link" routerLink="/categories/pets">
+            <div>
+              <img src="assets/images/pets.png" width="60%" alt="pets-image">
+            </div>
+            <div>
+              <span>Pets</span>
+            </div>
+          </a>
+      </div>
+      <div class="col-xs-2 marg-bot">
+          <a routerLink="/categories/services">
+            <div>
+              <img src="assets/images/services.png" width="60%" alt="services-image">
+            </div>
+            <div>
+              <span>Services</span>
+            </div>
+          </a>
+      </div>
+    </div>
   </div>
+</div>
 </ng-template>
