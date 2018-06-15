@@ -9,31 +9,21 @@ import 'rxjs/add/operator/pairwise';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  public showButton = false
+ 
   constructor(public router: Router,
     private route: ActivatedRoute) {
 
-    this.router.events.subscribe((event) => {
+    /* this.router.events.subscribe((event) => {
       console.log(event);
-    });
+    }); */
   }
 
-  public showAddButton = true;
-  public y;
+  
 
   ngOnInit() {
-    console.log(this.route);
-    this.y = this.route;
-    this.changeAppearence();
   }
 
-  changeAppearence() {
-    if (this.y._routerState.snapshot.url == '/submit-ad') {
-      this.showAddButton = false;
-    } else {
-      this.showAddButton = true;
-    }
-  }
+  
 
 
 
@@ -41,12 +31,5 @@ export class NavbarComponent implements OnInit {
 
 
 
-  submitAd() {
-    if (this.y._routerState.snapshot.url == '/submit-ad') {
-      this.showAddButton = false;
-    } else {
-      this.showAddButton = true;
-    }
-    this.changeAppearence();
-  }
+  
 }

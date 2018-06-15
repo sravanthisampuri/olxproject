@@ -23,6 +23,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { SubmitAdComponent } from './submit-ad/submit-ad.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -35,7 +36,8 @@ const routes:Routes=([
   {path:"login",component:LoginComponent},
   { path:"submit-ad",component:SubmitAdComponent},
   { path: 'categories', component: CategoriesComponent,
-children : [
+  
+  children : [
   {path : 'properties', component: PropertiesComponent},
   { path: 'cars', component: CarsComponent},
   { path: 'electronics', component: ElectronicsComponent},
@@ -76,7 +78,8 @@ children : [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ModalModule.forRoot()
 
   ],
   providers: [],
