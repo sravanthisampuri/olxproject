@@ -24,6 +24,7 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { SubmitAdComponent } from './submit-ad/submit-ad.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { LoginService } from './app.service';
 
 
 
@@ -82,7 +83,7 @@ const routes:Routes=([
     ModalModule.forRoot()
 
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
