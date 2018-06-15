@@ -35,7 +35,8 @@ const routes:Routes=([
   {path:"login",component:LoginComponent},
   { path:"submit-ad",component:SubmitAdComponent},
   { path: 'categories', component: CategoriesComponent,
-children : [
+  
+  children : [
   {path : 'properties', component: PropertiesComponent},
   { path: 'cars', component: CarsComponent},
   { path: 'electronics', component: ElectronicsComponent},

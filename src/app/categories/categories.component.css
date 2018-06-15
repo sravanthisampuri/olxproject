@@ -17,9 +17,16 @@ body{
     background-color: rgba(212, 184, 184, 0.5607843137254902);
     height: 600px;
  }
+
+ ul>li>a:hover{
+     color: red;
+ }
  .nav>li>a {
     padding: 12px 15px;
  }
+
+ 
+
  .main{
     padding: 15px;
  }
@@ -40,8 +47,13 @@ body{
  .list>li>a:hover{
     text-decoration: none;
     color: red;
+   
  
  }
+ .nohover a:hover { 
+     background-color: transparent;
+     }
+
  .line{
     border-bottom: 1px solid rgb(50, 110, 130);
     padding-bottom: 5px;
