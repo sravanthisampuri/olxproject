@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , TemplateRef } from '@angular/core';
 import { FormsModule, NgForm,FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 
 @Component({
@@ -9,6 +11,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./submit-ad.component.css']
 })
 export class SubmitAdComponent implements OnInit {
+
+  modalRef: BsModalRef;
+ 
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
+  }
+
 log={
 title:'',
 category:'',
@@ -16,7 +25,6 @@ description:'',
 name:'',
 phnnum:'',
 city:''
-
 }
 public show:boolean = false;
 maxlength=4096;
@@ -57,7 +65,8 @@ counttitle(msg){
 //   } public show:boolean = false;
 // }
 
-constructor(private route: Router){
+constructor(private route: Router,
+  private modalService: BsModalService){
 }
 
   ngOnInit() {

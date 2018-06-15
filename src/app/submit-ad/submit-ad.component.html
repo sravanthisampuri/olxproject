@@ -69,7 +69,7 @@
               </span>
             </label>
 
-            <input type="text" class="form-control" id="category" name="category" [(ngModel)]="log.category" #category="ngModel">
+            <input type="text" class="form-control" (click)="openModal(template)" id="category" name="category" [(ngModel)]="log.category" #category="ngModel">
            
             <a href="#">
               <img src="/assets/images/category.png">
@@ -225,3 +225,16 @@
   </div>
  
 </section> 
+
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Modal</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This is a modal.
+  </div>
+</ng-template>

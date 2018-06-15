@@ -23,6 +23,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { SubmitAdComponent } from './submit-ad/submit-ad.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -77,7 +78,8 @@ const routes:Routes=([
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ModalModule.forRoot()
 
   ],
   providers: [],
