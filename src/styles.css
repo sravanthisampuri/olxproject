@@ -8,8 +8,13 @@
 .submit-btn{
     display: none;
 }
+<<<<<<< HEAD
 .panel-default {
     border-color:white;
     background-color: #FBFAAE;
     margin-top: 10px;
+=======
+a{
+text-decoration: none !important;
+>>>>>>> ddab15d53feae071d2a8be1572bf074a13bb1bc9
 }

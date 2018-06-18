@@ -1,6 +1,10 @@
 
 .card-container.card {
+<<<<<<< HEAD
     max-width: 350px;
+=======
+    max-width: 400px;
+>>>>>>> ddab15d53feae071d2a8be1572bf074a13bb1bc9
     padding: 40px 40px;
 }
 
@@ -60,7 +64,7 @@
 
 .register{
     color: rgb(104, 145, 162);
-    padding-left: 75px;
+    float: right;
 }
 
 
@@ -71,18 +75,24 @@ background-repeat: no-repeat;
 height:70%; */
 }
 .btn-facebook{
-margin-top:20px;
-background-color: #4e6cab;
-
-}
-.btn-google{
-    margin-top:20px;
-    background-color: #dd4b39;
-}
+    
+    background-color: #4e6cab;
+    color: #fff;
+    margin:20px 20px 0px 20px;
+    font-size: 12px;
+    padding:6px 5px !important;
+    
+    }
+    .btn-google{
+        margin-top:20px;
+        background-color: #dd4b39;
+        color:#fff;
+        font-size: 12px;
+    padding:6px 5px !important;
+    
+    }
+    
 .btn > a{
     color:#fff;
-    text-decoration: none;
-}
-a{
     text-decoration: none;
 }
