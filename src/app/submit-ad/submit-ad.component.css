@@ -417,6 +417,7 @@ margin-bottom: 10px;
 .modal-content{
     height: 350px;
     width: 750px !important;
+    overflow: auto;
  
  }
  .nohover a:hover { 
@@ -432,5 +433,7 @@ margin-bottom: 10px;
         background-color: rgba(212, 184, 184, 0.5607843137254902);
         
      } */
+
+
  
 

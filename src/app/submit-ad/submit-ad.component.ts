@@ -31,8 +31,10 @@ name:'',
 phnnum:'',
 city:''
 }
-public show:boolean = false;
-public show1:boolean = false;
+public show:any ;
+public show1:any;
+public show2:any;
+
 
 maxlength=4096;
 titlelength=70
@@ -41,11 +43,21 @@ public tweetmsg:any;
 characterleft=this.maxlength;
 charactersleft=this.titlelength;
 
-clicked(menuName) {
 
- this.show1 = menuName;
+clickedOne(menuName1) {
+  this.show2 = '';
+  this.show1 = menuName1;
+   
+ }
+
+clicked(menuName2) {
+
+ this.show2 = menuName2;
   
 }
+
+
+
 
 count(tweetmsg){
   tweetmsg=this.log.description.length;
