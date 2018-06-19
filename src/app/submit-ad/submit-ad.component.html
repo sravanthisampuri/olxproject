@@ -25,8 +25,7 @@
               </span>
             </label>
 
-            <input type="text" class="form-control"  id="category" name="category" [(ngModel)]="log.category"
-              #category="ngModel">
+            <input type="text" class="form-control" id="category" name="category" [(ngModel)]="log.category" #category="ngModel">
 
             <label for="categories">
               <img src="/assets/images/category-icon.png" id="categories">
@@ -199,26 +198,27 @@
 
 <ng-template #template>
   <div class="modal-content">
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">select category</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <div class="col-xs-12">
-      <div class="col-xs-2 marg-bot">
-        <a routerLinkActive="active-link" routerLink='/categories/properties'>
-          <div>
-            <img src="assets/images/home.png" width="60%" alt="home-image">
-          </div>
-          <div>
-            <span>Properties</span>
-          </div>
-        </a>
-      </div>
-      <div class="col-xs-2 marg-bot">
-          <a routerLinkActive="active-link" routerLink="/categories/cars">
+
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Select category</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body text-center" >
+      <div class="col-xs-12">
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+          <a routerLinkActive="active-link" routerLink='#'>
+            <div>
+              <img src="assets/images/home.png" width="60%" alt="home-image">
+            </div>
+            <div>
+              <span>Properties</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+          <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/car.png" width="60%" alt="car-image">
             </div>
@@ -226,9 +226,9 @@
               <span>Cars</span>
             </div>
           </a>
-      </div>
-      <div class="col-xs-2 marg-bot">
-          <a routerLinkActive="active-link" routerLink="/categories/electronics">
+        </div>
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+          <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/electronics.png" width="60%" alt="electronics-image">
             </div>
@@ -236,9 +236,9 @@
               <span>Electronics & Applicances</span>
             </div>
           </a>
-      </div>
-      <div class="col-xs-2 marg-bot">
-          <a routerLinkActive="active-link" routerLink="/categories/furniture">
+        </div>
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+          <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/furniture.png" width="60%" alt="furniture-image">
             </div>
@@ -246,9 +246,9 @@
               <span>Furniture</span>
             </div>
           </a>
-      </div>
-      <div class="col-xs-2 marg-bot">
-          <a routerLinkActive="active-link" routerLink="/categories/jobs">
+        </div>
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+          <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/jobs.png" width="60%" alt="job-image">
             </div>
@@ -256,9 +256,9 @@
               <span>Jobs</span>
             </div>
           </a>
-      </div>
-      <div class="col-xs-2 marg-bot">
-          <a routerLinkActive="active-link" routerLink="/categories/mobiles">
+        </div>
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+          <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/mobiles.png" width="60%" alt="mobiles-image">
             </div>
@@ -266,11 +266,11 @@
               <span>Mobiles</span>
             </div>
           </a>
+        </div>
       </div>
-    </div>
-    <div class="col-xs-12">
-      <div class="col-xs-2 marg-bot">
-          <a routerLinkActive="active-link" routerLink="/categories/bikes">
+      <div class="col-xs-12">
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+          <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/bikes.png" width="60%" alt="bikes-image">
             </div>
@@ -278,9 +278,9 @@
               <span>Bikes</span>
             </div>
           </a>
-      </div>
-      <div class="col-xs-2 marg-bot">
-          <a routerLinkActive="active-link" routerLink="/categories/books">
+        </div>
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+          <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/books-sports.png" width="60%" alt="books-image">
             </div>
@@ -288,9 +288,9 @@
               <span>Books,Sports & Hobbies</span>
             </div>
           </a>
-      </div>
-      <div class="col-xs-2 marg-bot">
-          <a routerLinkActive="active-link" routerLink="/categories/fashion">
+        </div>
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+          <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/fashion.png" width="60%" alt="fashion-image">
             </div>
@@ -298,9 +298,9 @@
               <span>Fashion</span>
             </div>
           </a>
-      </div>
-      <div class="col-xs-2 marg-bot">
-          <a routerLinkActive="active-link" routerLink="/categories/pets">
+        </div>
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+          <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/pets.png" width="60%" alt="pets-image">
             </div>
@@ -308,9 +308,9 @@
               <span>Pets</span>
             </div>
           </a>
-      </div>
-      <div class="col-xs-2 marg-bot">
-          <a routerLink="/categories/services">
+        </div>
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+          <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/services.png" width="60%" alt="services-image">
             </div>
@@ -318,8 +318,134 @@
               <span>Services</span>
             </div>
           </a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </ng-template>
+
+
+<ng-template #templateNested>
+  <div class="modal-content">
+    <div class="modal-header col-sm-12">
+      <h4 class="modal-title pull-left col-sm-4">Category</h4>
+      <h4 class="modal-title pull-left col-sm-4">Properties</h4>
+      <h4 class="modal-title pull-left col-sm-4">For Sale</h4>
+      
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef2.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body col-sm-12">
+      <div class="col-sm-4 sidebar">
+        <ul class="nav nav-sidebar">
+
+          <li class="nohover">
+            <a routerLinkActive="active-link" routerLink='#'>Properties
+              <span> > </span>
+            </a>
+          </li>
+
+          <li class="nohover">
+            <a routerLinkActive="active-link" routerLink='#'>Cars
+              <span> > </span>
+            </a>
+          </li>
+          <li class="nohover">
+            <a routerLinkActive="active-link" routerLink='#'>Electronics-Appliances
+              <span> > </span>
+            </a>
+          </li>
+          <li class="nohover">
+            <a routerLinkActive="active-link" routerLink='#'>Furniture
+              <span> > </span>
+            </a>
+          </li>
+          <li class="nohover">
+            <a routerLinkActive="active-link" routerLink='#'>Jobs
+              <span> > </span>
+            </a>
+          </li>
+          <li class="nohover">
+            <a routerLinkActive="active-link" routerLink='#'>Mobiles
+              <span> > </span>
+            </a>
+          </li>
+          <li class="nohover">
+            <a routerLinkActive="active-link" routerLink='#'>Bikes
+              <span> > </span>
+            </a>
+          </li>
+          <li class="nohover">
+            <a routerLinkActive="active-link" routerLink='#'>Books,Sports & Hobbies
+              <span> > </span>
+            </a>
+          </li>
+          <li class="nohover">
+            <a routerLinkActive="active-link" routerLink='#'>Fashion
+              <span> > </span>
+            </a>
+          </li>
+          <li class="nohover">
+            <a routerLinkActive="active-link" routerLink='#'>Pets
+              <span> > </span>
+            </a>
+          </li>
+          <li class="nohover">
+            <a routerLinkActive="active-link" routerLink='#'>Services
+              <span> > </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-4 sidebar">
+        <ul class="nav nav-sidebar">
+
+          <li class="nohover">
+            <a routerLinkActive="active-link" routerLink='#' (click)="clicked()">
+              For Sale 
+              <span> > </span></a>
+            </li>
+
+          <li class="nohover">
+            <a routerLinkActive="active-link" routerLink='#' (click)="clicked()">For Rent
+              <span> > </span>
+            </a>
+          </li>
+          <li class="nohover">
+            <a routerLinkActive="active-link" routerLink='#'>For Projects
+              <span> > </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div *ngIf="show1">
+         
+
+          <div class="col-sm-4 sidebar">
+              <!-- <div class="modal-header">
+                  <h4 class="modal-title pull-left col-sm-4">For Sale</h4>
+              </div> -->
+            <ul class="nav nav-sidebar">
+              <li>
+                <a>Apartments</a>
+              </li>
+              <li>
+                <a>Houses & Villas</a>
+              </li>
+              <li>
+                <a>Builder Floors</a>
+              </li>
+              <li>
+                <a>Land & Plots</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+      <!-- <button *ngIf="modalRef" type="button" class="btn btn-danger" (click)="closeFirstModal()">Close first modal</button> -->
+    </div>
+  </div>
+</ng-template>
+
+    

@@ -13,9 +13,13 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 export class SubmitAdComponent implements OnInit {
 
   modalRef: BsModalRef;
+  modalRef2: BsModalRef;
  
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
+  }
+  openModal2(templateNested: TemplateRef<any>) {
+    this.modalRef2 = this.modalService.show(templateNested);
   }
 
 log={
@@ -27,12 +31,20 @@ phnnum:'',
 city:''
 }
 public show:boolean = false;
+public show1:boolean = false;
+
 maxlength=4096;
 titlelength=70
 public msg;
 public tweetmsg:any;
 characterleft=this.maxlength;
 charactersleft=this.titlelength;
+
+clicked() {
+
+ this.show1 = !this.show1;
+  
+}
 
 count(tweetmsg){
   tweetmsg=this.log.description.length;

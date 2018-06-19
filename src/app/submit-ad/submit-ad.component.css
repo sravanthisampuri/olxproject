@@ -422,7 +422,18 @@ margin-bottom: 10px;
     width: 750px !important;
  
  }
-
-
+ .nohover a:hover { 
+    background-color: transparent;
+    }
+    .nav>li>a {
+        padding: 2px 2px;
+    }
+    .nav>li>a:hover{
+        color: red;
+    }
+    /* .sidebar{
+        background-color: rgba(212, 184, 184, 0.5607843137254902);
+        
+     } */
  
 
