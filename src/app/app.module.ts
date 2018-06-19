@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import{RouterModule,Routes} from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 
 import { AppComponent } from './app.component';
@@ -80,8 +81,8 @@ const routes:Routes=([
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    ModalModule.forRoot()
-
+    ModalModule.forRoot(),
+    AccordionModule.forRoot()
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]

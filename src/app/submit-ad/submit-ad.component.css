@@ -326,9 +326,9 @@ margin-bottom: 10px;
 } */
 .helpbox{
     position:fixed;
-    left:98%;
+    left:78%;
     top:50%;
-    transform: translate(-50%,-50%);
+    transform: rotate(270deg);
  
     
 }
@@ -339,11 +339,8 @@ margin-bottom: 10px;
 }
 
 .helpbox-text{
-    position: absolute;
-    bottom: -48px;
-    width: 150px;
-    height: 140px;
-    left: 94px;
+    
+    transform: rotate(90deg);
     border: 1px solid rgb(17, 16, 16);
     
 

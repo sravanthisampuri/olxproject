@@ -175,7 +175,7 @@
     </div>
   </div>
 
-  <div class="helpbox">
+  <!-- <div class="helpbox">
     <button class="btn btn-primary">
       <b>Need help?</b>
     </button>
@@ -191,7 +191,23 @@
     </div>
 
 
-  </div>
+  </div> -->
+
+
+  <accordion class="helpbox">
+    <accordion-group heading="Need help?" [isOpen]="toggleOpen">
+      <div class="helpbox-text text-center">
+        <p>Need help?</p>
+        <p>
+          <b>call us at</b>
+        </p>
+        <span>
+          <a href="tel:1800-103-3333" id="callTollFree">1800-103-3333</a>
+        </span>
+        <p>(10am - 7pm all 7 days)</p>
+      </div>
+    </accordion-group>
+  </accordion>
 
 </section>
 
@@ -205,7 +221,7 @@
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-    <div class="modal-body text-center" >
+    <div class="modal-body text-center">
       <div class="col-xs-12">
         <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
           <a routerLinkActive="active-link" routerLink='#'>
@@ -331,7 +347,7 @@
       <h4 class="modal-title pull-left col-sm-4">Category</h4>
       <h4 class="modal-title pull-left col-sm-4">Properties</h4>
       <h4 class="modal-title pull-left col-sm-4">For Sale</h4>
-      
+
       <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef2.hide()">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -402,13 +418,14 @@
         <ul class="nav nav-sidebar">
 
           <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='#' (click)="clicked()">
-              For Sale 
-              <span> > </span></a>
-            </li>
+            <a routerLinkActive="active-link" routerLink='#' (click)="clicked('Sale')">
+              For Sale
+              <span> > </span>
+            </a>
+          </li>
 
           <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='#' (click)="clicked()">For Rent
+            <a routerLinkActive="active-link" routerLink='#' (click)="clicked('Rent')">For Rent
               <span> > </span>
             </a>
           </li>
@@ -419,33 +436,31 @@
           </li>
         </ul>
       </div>
-      <div *ngIf="show1">
-         
+      <div *ngIf="show1 == 'Rent'">
 
-          <div class="col-sm-4 sidebar">
-              <!-- <div class="modal-header">
+
+        <div class="col-sm-4 sidebar">
+          <!-- <div class="modal-header">
                   <h4 class="modal-title pull-left col-sm-4">For Sale</h4>
               </div> -->
-            <ul class="nav nav-sidebar">
-              <li>
-                <a>Apartments</a>
-              </li>
-              <li>
-                <a>Houses & Villas</a>
-              </li>
-              <li>
-                <a>Builder Floors</a>
-              </li>
-              <li>
-                <a>Land & Plots</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="nav nav-sidebar">
+            <li>
+              <a>Apartments</a>
+            </li>
+            <li>
+              <a>Houses & Villas</a>
+            </li>
+            <li>
+              <a>Builder Floors</a>
+            </li>
+            <li>
+              <a>Land & Plots</a>
+            </li>
+          </ul>
         </div>
-  
+      </div>
+
       <!-- <button *ngIf="modalRef" type="button" class="btn btn-danger" (click)="closeFirstModal()">Close first modal</button> -->
     </div>
   </div>
 </ng-template>
-
-    

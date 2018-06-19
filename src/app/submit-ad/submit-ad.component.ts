@@ -11,7 +11,7 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
   styleUrls: ['./submit-ad.component.css']
 })
 export class SubmitAdComponent implements OnInit {
-
+  toggleOpen = false;
   modalRef: BsModalRef;
   modalRef2: BsModalRef;
  
@@ -19,6 +19,7 @@ export class SubmitAdComponent implements OnInit {
     this.modalRef = this.modalService.show(template);
   }
   openModal2(templateNested: TemplateRef<any>) {
+    this.modalRef.hide();
     this.modalRef2 = this.modalService.show(templateNested);
   }
 
@@ -40,9 +41,9 @@ public tweetmsg:any;
 characterleft=this.maxlength;
 charactersleft=this.titlelength;
 
-clicked() {
+clicked(menuName) {
 
- this.show1 = !this.show1;
+ this.show1 = menuName;
   
 }
 
