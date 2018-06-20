@@ -58,6 +58,7 @@ clicked(menuName2) {
   
 }
 clickedTwo(menuName3) {
+  this.modalRef2.hide();
 this.data=menuName3.target.childNodes[0].data
 console.log(menuName3.target.childNodes[0].data);
    this.log.category =this.data

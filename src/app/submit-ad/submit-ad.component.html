@@ -344,7 +344,7 @@
 <ng-template #templateNested>
   <div class="modal-content">
 
-    <div class="modal-body col-sm-12">
+    <div class="modal-body col-sm-12" >
       <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef2.hide()">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -448,7 +448,7 @@
 
       <div *ngIf="show1 == 'cars'">
 
-        <div class="col-sm-4 sidebar">
+        <div class="col-sm-4 sidebar" >
 
           <ul class="nav nav-sidebar">
             <li>
@@ -462,16 +462,16 @@
               </a>
             </li>
 
-            <li class="nohover">
+            <li class="nohover" (click)="clickedTwo($event)">
               <a routerLinkActive="active-link" routerLink='#'>Commercial Vehicles
 
               </a>
             </li>
-            <li class="nohover">
+            <li class="nohover" (click)="clickedTwo($event)">
               <a routerLinkActive="active-link" routerLink='#'>Other Vehicles
               </a>
             </li>
-            <li class="nohover">
+            <li class="nohover" (click)="clickedTwo($event)">
               <a routerLinkActive="active-link" routerLink='#'>Spare Parts
               </a>
             </li>
@@ -482,7 +482,7 @@
       <div *ngIf="show2 == 'Vehicles'">
 
 
-        <div class="col-sm-3 sidebar">
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
 
           <ul class="nav nav-sidebar">
             <li>
@@ -537,7 +537,7 @@
 
       <div *ngIf="show1 == 'electronics'">
 
-        <div class="col-sm-4 sidebar">
+        <div class="col-sm-4 sidebar" (click)="clickedTwo($event)">
 
           <ul class="nav nav-sidebar">
             <li>
@@ -593,7 +593,7 @@
       </div>
       <div *ngIf="show1 == 'furniture'">
 
-        <div class="col-sm-4 sidebar">
+        <div class="col-sm-4 sidebar" (click)="clickedTwo($event)">
 
           <ul class="nav nav-sidebar">
             <li>
@@ -631,7 +631,7 @@
 
       <div *ngIf="show1 == 'jobs'">
 
-        <div class="col-sm-4 sidebar">
+        <div class="col-sm-4 sidebar" (click)="clickedTwo($event)">
 
           <ul class="nav nav-sidebar">
             <li>
@@ -713,7 +713,7 @@
       <div *ngIf="show2 == 'phones'">
 
 
-        <div class="col-sm-3 sidebar">
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
 
           <ul class="nav nav-sidebar">
             <li>
@@ -769,7 +769,7 @@
       <div *ngIf="show2 == 'tablets'">
 
 
-        <div class="col-sm-3 sidebar">
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
 
           <ul class="nav nav-sidebar">
             <li>
@@ -792,7 +792,7 @@
       <div *ngIf="show2 == 'accessories'">
 
 
-        <div class="col-sm-3 sidebar">
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
 
           <ul class="nav nav-sidebar">
             <li>
@@ -844,7 +844,7 @@
       <div *ngIf="show2 == 'motor'">
 
 
-        <div class="col-sm-3 sidebar">
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
 
           <ul class="nav nav-sidebar">
             <li>
@@ -881,7 +881,7 @@
       <div *ngIf="show2 == 'Scootres'">
 
 
-        <div class="col-sm-3 sidebar">
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
 
           <ul class="nav nav-sidebar">
             <li>
@@ -914,7 +914,7 @@
       <div *ngIf="show2 == 'bicycles'">
 
 
-        <div class="col-sm-3 sidebar">
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
 
           <ul class="nav nav-sidebar">
             <li>
@@ -940,7 +940,7 @@
 
       <div *ngIf="show1 == 'books'">
 
-        <div class="col-sm-4 sidebar">
+        <div class="col-sm-4 sidebar" (click)="clickedTwo($event)">
 
           <ul class="nav nav-sidebar">
             <li>
@@ -979,7 +979,7 @@
 
       <div *ngIf="show1 == 'fashion'">
 
-        <div class="col-sm-4 sidebar">
+        <div class="col-sm-4 sidebar" (click)="clickedTwo($event)">
 
           <ul class="nav nav-sidebar">
             <li>
@@ -1008,7 +1008,7 @@
 
       <div *ngIf="show1 == 'pets'">
 
-        <div class="col-sm-4 sidebar">
+        <div class="col-sm-4 sidebar" (click)="clickedTwo($event)">
 
           <ul class="nav nav-sidebar">
             <li>
@@ -1037,7 +1037,7 @@
 
       <div *ngIf="show1 == 'services'">
 
-        <div class="col-sm-4 sidebar">
+        <div class="col-sm-4 sidebar" (click)="clickedTwo($event)">
 
           <ul class="nav nav-sidebar">
             <li>
