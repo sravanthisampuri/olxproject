@@ -25,7 +25,7 @@
               </span>
             </label>
 
-            <input type="text" class="form-control" id="category" name="category" [(ngModel)]="log.category" #category="ngModel">
+            <input type="text" class="form-control" id="category" name="category" [(ngModel)]="log.category"  #category="ngModel">
 
             <label for="categories">
               <img src="/assets/images/category-icon.png" id="categories">
@@ -1075,7 +1075,7 @@
       <div *ngIf="show2 == 'Sale'">
 
 
-        <div class="col-sm-3 sidebar">
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
 
           <ul class="nav nav-sidebar">
             <li>
@@ -1106,7 +1106,7 @@
       <div *ngIf="show2 == 'Rent'">
 
 
-        <div class="col-sm-3 sidebar">
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
 
           <ul class="nav nav-sidebar">
 
