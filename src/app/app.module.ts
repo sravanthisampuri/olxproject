@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import{RouterModule,Routes} from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { TabsModule } from 'ngx-bootstrap';
+import { BsDropdownModule } from 'ngx-bootstrap';
+
+
 
 
 import { AppComponent } from './app.component';
@@ -26,6 +30,7 @@ import { LoginComponent } from './login/login.component';
 import { SubmitAdComponent } from './submit-ad/submit-ad.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { LoginService } from './app.service';
+import { CarSaleComponent } from './car-sale/car-sale.component';
 
 
 
@@ -37,6 +42,7 @@ const routes:Routes=([
   {path:"signup",component:SignupComponent},
   {path:"login",component:LoginComponent},
   { path:"submit-ad",component:SubmitAdComponent},
+  { path: 'carSale', component: CarSaleComponent},
   { path: 'categories', component: CategoriesComponent,
   
   children : [
@@ -75,14 +81,17 @@ const routes:Routes=([
     FooterComponent,
     SignupComponent,
     LoginComponent,
-    SubmitAdComponent
+    SubmitAdComponent,
+    CarSaleComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    TabsModule.forRoot(),
     RouterModule.forRoot(routes),
     ModalModule.forRoot(),
-    AccordionModule.forRoot()
+     AccordionModule.forRoot(),
+     BsDropdownModule.forRoot()
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]
