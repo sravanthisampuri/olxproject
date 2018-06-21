@@ -14,6 +14,7 @@ export class SubmitAdComponent implements OnInit {
   toggleOpen = false;
   modalRef: BsModalRef;
   modalRef2: BsModalRef;
+  data;
  
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
@@ -31,8 +32,11 @@ name:'',
 phnnum:'',
 city:''
 }
-public show:boolean = false;
-public show1:boolean = false;
+public show:any ;
+public show1:any;
+public show2:any;
+public show3:any;
+
 
 maxlength=4096;
 titlelength=70
@@ -41,11 +45,27 @@ public tweetmsg:any;
 characterleft=this.maxlength;
 charactersleft=this.titlelength;
 
-clicked(menuName) {
 
- this.show1 = menuName;
+clickedOne(menuName1) {
+  this.show2 = '';
+  this.show1 = menuName1;
+   
+ }
+
+clicked(menuName2) {
+
+ this.show2 = menuName2;
   
 }
+clickedTwo(menuName3) {
+  this.modalRef2.hide();
+this.data=menuName3.target.childNodes[0].data
+console.log(menuName3.target.childNodes[0].data);
+   this.log.category =this.data
+ }
+
+
+
 
 count(tweetmsg){
   tweetmsg=this.log.description.length;

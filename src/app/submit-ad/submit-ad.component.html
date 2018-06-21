@@ -25,7 +25,7 @@
               </span>
             </label>
 
-            <input type="text" class="form-control" id="category" name="category" [(ngModel)]="log.category" #category="ngModel">
+            <input type="text" class="form-control" id="category" name="category" [(ngModel)]="log.category"  #category="ngModel">
 
             <label for="categories">
               <img src="/assets/images/category-icon.png" id="categories">
@@ -223,7 +223,7 @@
     </div>
     <div class="modal-body text-center">
       <div class="col-xs-12">
-        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)" (click)="clickedOne('Properties')">
           <a routerLinkActive="active-link" routerLink='#'>
             <div>
               <img src="assets/images/home.png" width="60%" alt="home-image">
@@ -233,7 +233,7 @@
             </div>
           </a>
         </div>
-        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)" (click)="clickedOne('cars')">
           <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/car.png" width="60%" alt="car-image">
@@ -243,7 +243,7 @@
             </div>
           </a>
         </div>
-        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)" (click)="clickedOne('electronics')">
           <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/electronics.png" width="60%" alt="electronics-image">
@@ -253,7 +253,7 @@
             </div>
           </a>
         </div>
-        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)" (click)="clickedOne('furniture')">
           <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/furniture.png" width="60%" alt="furniture-image">
@@ -263,7 +263,7 @@
             </div>
           </a>
         </div>
-        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)" (click)="clickedOne('jobs')">
           <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/jobs.png" width="60%" alt="job-image">
@@ -273,7 +273,7 @@
             </div>
           </a>
         </div>
-        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)" (click)="clickedOne('mobiles')">
           <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/mobiles.png" width="60%" alt="mobiles-image">
@@ -285,7 +285,7 @@
         </div>
       </div>
       <div class="col-xs-12">
-        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)" (click)="clickedOne('bikes')">
           <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/bikes.png" width="60%" alt="bikes-image">
@@ -295,7 +295,7 @@
             </div>
           </a>
         </div>
-        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)" (click)="clickedOne('books')">
           <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/books-sports.png" width="60%" alt="books-image">
@@ -305,7 +305,7 @@
             </div>
           </a>
         </div>
-        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)" (click)="clickedOne('fashion')">
           <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/fashion.png" width="60%" alt="fashion-image">
@@ -315,7 +315,7 @@
             </div>
           </a>
         </div>
-        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)" (click)="clickedOne('pets')">
           <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/pets.png" width="60%" alt="pets-image">
@@ -325,7 +325,7 @@
             </div>
           </a>
         </div>
-        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)">
+        <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)" (click)="clickedOne('services')">
           <a routerLinkActive="active-link" routerLink="#">
             <div>
               <img src="assets/images/services.png" width="60%" alt="services-image">
@@ -343,107 +343,745 @@
 
 <ng-template #templateNested>
   <div class="modal-content">
-    <div class="modal-header col-sm-12">
-      <h4 class="modal-title pull-left col-sm-4">Category</h4>
-      <h4 class="modal-title pull-left col-sm-4">Properties</h4>
-      <h4 class="modal-title pull-left col-sm-4">For Sale</h4>
 
+    <div class="modal-body col-sm-12" >
       <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef2.hide()">
         <span aria-hidden="true">&times;</span>
       </button>
-    </div>
-    <div class="modal-body col-sm-12">
+
       <div class="col-sm-4 sidebar">
+
         <ul class="nav nav-sidebar">
 
+          <li>
+            <b>Category</b>
+          </li>
+          <br>
+
           <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='#'>Properties
+            <a routerLinkActive="active-link" routerLink='#' (click)="clickedOne('Properties')">Properties
               <span> > </span>
             </a>
           </li>
 
           <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='#'>Cars
+            <a routerLinkActive="active-link" routerLink='#' (click)="clickedOne('cars')">Cars
               <span> > </span>
             </a>
           </li>
           <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='#'>Electronics-Appliances
+            <a routerLinkActive="active-link" routerLink='#' (click)="clickedOne('electronics')">Electronics-Appliances
               <span> > </span>
             </a>
           </li>
           <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='#'>Furniture
+            <a routerLinkActive="active-link" routerLink='#' (click)="clickedOne('furniture')">Furniture
               <span> > </span>
             </a>
           </li>
           <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='#'>Jobs
+            <a routerLinkActive="active-link" routerLink='#' (click)="clickedOne('jobs')">Jobs
               <span> > </span>
             </a>
           </li>
           <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='#'>Mobiles
+            <a routerLinkActive="active-link" routerLink='#' (click)="clickedOne('mobiles')">Mobiles
               <span> > </span>
             </a>
           </li>
           <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='#'>Bikes
+            <a routerLinkActive="active-link" routerLink='#' (click)="clickedOne('bikes')">Bikes
               <span> > </span>
             </a>
           </li>
           <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='#'>Books,Sports & Hobbies
+            <a routerLinkActive="active-link" routerLink='#' (click)="clickedOne('books')">Books,Sports & Hobbies
               <span> > </span>
             </a>
           </li>
           <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='#'>Fashion
+            <a routerLinkActive="active-link" routerLink='#' (click)="clickedOne('fashion')">Fashion
               <span> > </span>
             </a>
           </li>
           <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='#'>Pets
+            <a routerLinkActive="active-link" routerLink='#' (click)="clickedOne('pets')">Pets
               <span> > </span>
             </a>
           </li>
           <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='#'>Services
+            <a routerLinkActive="active-link" routerLink='#' (click)="clickedOne('services')">Services
               <span> > </span>
             </a>
           </li>
         </ul>
       </div>
-      <div class="col-sm-4 sidebar">
-        <ul class="nav nav-sidebar">
-
-          <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='#' (click)="clicked('Sale')">
-              For Sale
-              <span> > </span>
-            </a>
-          </li>
-
-          <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='#' (click)="clicked('Rent')">For Rent
-              <span> > </span>
-            </a>
-          </li>
-          <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='#'>For Projects
-              <span> > </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div *ngIf="show1 == 'Rent'">
-
+      <div *ngIf="show1 == 'Properties'">
 
         <div class="col-sm-4 sidebar">
-          <!-- <div class="modal-header">
-                  <h4 class="modal-title pull-left col-sm-4">For Sale</h4>
-              </div> -->
+
           <ul class="nav nav-sidebar">
+            <li>
+              <b>Properties</b>
+            </li>
+            <br>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#' (click)="clicked('Sale')">
+                For Sale
+                <span> > </span>
+              </a>
+            </li>
+
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#' (click)="clicked('Rent')">For Rent
+                <span> > </span>
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#' (click)="clicked('Projects')">New Projects
+                <span> > </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div *ngIf="show1 == 'cars'">
+
+        <div class="col-sm-4 sidebar" >
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>Cars</b>
+            </li>
+            <br>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#' (click)="clicked('Vehicles')">
+                Cars
+                <span> > </span>
+              </a>
+            </li>
+
+            <li class="nohover" (click)="clickedTwo($event)">
+              <a routerLinkActive="active-link" routerLink='#'>Commercial Vehicles
+
+              </a>
+            </li>
+            <li class="nohover" (click)="clickedTwo($event)">
+              <a routerLinkActive="active-link" routerLink='#'>Other Vehicles
+              </a>
+            </li>
+            <li class="nohover" (click)="clickedTwo($event)">
+              <a routerLinkActive="active-link" routerLink='#'>Spare Parts
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div *ngIf="show2 == 'Vehicles'">
+
+
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>Cars</b>
+            </li>
+            <br>
+            <li>
+              <a>Maruthi Suziki</a>
+            </li>
+            <li>
+              <a>Hyundai</a>
+            </li>
+            <li>
+              <a>Tata</a>
+            </li>
+            <li>
+              <a>Mahindra</a>
+            </li>
+            <li>
+              <a>Toyota</a>
+            </li>
+            <li>
+              <a>Honda</a>
+            </li>
+            <li>
+              <a>Chorvolet</a>
+            </li>
+            <li>
+              <a>Ford</a>
+            </li>
+            <li>
+              <a>Scoda</a>
+            </li>
+            <li>
+              <a>Fiat</a>
+            </li>
+            <li>
+              <a>Nissan</a>
+            </li>
+            <li>
+              <a>Audi</a>
+            </li>
+            <li>
+              <a>BMW</a>
+            </li>
+            <li>
+              <a>Other Brands</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div *ngIf="show1 == 'electronics'">
+
+        <div class="col-sm-4 sidebar" (click)="clickedTwo($event)">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>Electronics-Appliances</b>
+            </li>
+            <br>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>
+                Computers & Laptops
+              </a>
+            </li>
+
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>TV's Video-Audio
+
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Hard Disks,Printer & Moniter
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>ACs
+              </a>
+            </li>
+
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Washing Machines
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Fridges
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Computer Accessories
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Cameras & Lenses
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Kitchen & Other Appliances
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Games & Entertainment
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div *ngIf="show1 == 'furniture'">
+
+        <div class="col-sm-4 sidebar" (click)="clickedTwo($event)">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>Furniture</b>
+            </li>
+            <br>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>
+                Sofa & Dining
+              </a>
+            </li>
+
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Beds & Wardrobes
+
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Home Decor & Garden
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Other Household items
+              </a>
+            </li>
+
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Kids Furniture
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div *ngIf="show1 == 'jobs'">
+
+        <div class="col-sm-4 sidebar" (click)="clickedTwo($event)">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>Jobs</b>
+            </li>
+            <br>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>
+                Data entry
+              </a>
+            </li>
+
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>BPO & Telecaller
+
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Operator & Technician
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Sales & Marketing
+              </a>
+            </li>
+
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Cook
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Driver
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>IT Engineer & Developer
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Designer
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div *ngIf="show1 == 'mobiles'">
+
+        <div class="col-sm-4 sidebar">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>Mobiles</b>
+            </li>
+            <br>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#' (click)="clicked('phones')">
+                Mobile Phones
+                <span> > </span>
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#' (click)="clicked('tablets')">
+                Tablets
+                <span> > </span>
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#' (click)="clicked('accessories')">
+                Accessories
+                <span> > </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div *ngIf="show2 == 'phones'">
+
+
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>Mobile Phones</b>
+            </li>
+            <br>
+            <li>
+              <a>Samsung</a>
+            </li>
+            <li>
+              <a>iPhone</a>
+            </li>
+            <li>
+              <a>Micromax</a>
+            </li>
+            <li>
+              <a>Nokia</a>
+            </li>
+            <li>
+              <a>Sony</a>
+            </li>
+            <li>
+              <a>Mi</a>
+            </li>
+            <li>
+              <a>HTC</a>
+            </li>
+            <li>
+              <a>Lenovo</a>
+            </li>
+            <li>
+              <a>Gionee</a>
+            </li>
+            <li>
+              <a>Motorola</a>
+            </li>
+            <li>
+              <a>Oppo</a>
+            </li>
+            <li>
+              <a>Vivo</a>
+            </li>
+            <li>
+              <a>Lenovo</a>
+            </li>
+            <li>
+              <a>Intex</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div *ngIf="show2 == 'tablets'">
+
+
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>Tablets</b>
+            </li>
+            <br>
+            <li>
+              <a>Samsung</a>
+            </li>
+            <li>
+              <a>iPads</a>
+            </li>
+            <li>
+              <a>Other Tablets</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div *ngIf="show2 == 'accessories'">
+
+
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>Accessories</b>
+            </li>
+            <br>
+            <li>
+              <a>Mobile</a>
+            </li>
+            <li>
+              <a>Tablets</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div *ngIf="show1 == 'bikes'">
+
+        <div class="col-sm-4 sidebar">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>Bikes</b>
+            </li>
+            <br>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#' (click)="clicked('motor')">
+                Motorcycles
+                <span> > </span>
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#' (click)="clicked('Scootres')">
+                Scootres
+                <span> > </span>
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#' (click)="clicked('bicycles')">
+                Bicycles
+                <span> > </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div *ngIf="show2 == 'motor'">
+
+
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>Motorcycles</b>
+            </li>
+            <br>
+            <li>
+              <a>Bajaj</a>
+            </li>
+            <li>
+              <a>Hero Honda</a>
+            </li>
+            <li>
+              <a>Yamaha</a>
+            </li>
+            <li>
+              <a>Royal Enfield</a>
+            </li>
+            <li>
+              <a>Honda</a>
+            </li>
+            <li>
+              <a>Hero</a>
+            </li>
+            <li>
+              <a>TVS</a>
+            </li>
+            <li>
+              <a>Suzuki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div *ngIf="show2 == 'Scootres'">
+
+
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>Scootres</b>
+            </li>
+            <br>
+            <li>
+              <a>Honda</a>
+            </li>
+            <li>
+              <a>TVS</a>
+            </li>
+            <li>
+              <a>Mahindra</a>
+            </li>
+            <li>
+              <a>Bajaj</a>
+            </li>
+
+            <li>
+              <a>Hero</a>
+            </li>
+
+            <li>
+              <a>Suzuki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div *ngIf="show2 == 'bicycles'">
+
+
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>Bicycles</b>
+            </li>
+            <br>
+            <li>
+              <a>Hero</a>
+            </li>
+            <li>
+              <a>Hercules</a>
+            </li>
+            <li>
+              <a>Other Brands</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+
+
+
+      <div *ngIf="show1 == 'books'">
+
+        <div class="col-sm-4 sidebar" (click)="clickedTwo($event)">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>Books, Sports & Hobbies</b>
+            </li>
+            <br>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>
+                Books
+              </a>
+            </li>
+
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Musical Instruments
+
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Sports Equipment
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Gym & Fitness
+              </a>
+            </li>
+
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Other Hobbies
+              </a>
+            </li>
+
+
+          </ul>
+        </div>
+      </div>
+
+      <div *ngIf="show1 == 'fashion'">
+
+        <div class="col-sm-4 sidebar" (click)="clickedTwo($event)">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>Fashion</b>
+            </li>
+            <br>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>
+                Men
+              </a>
+            </li>
+
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Women
+
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Kids
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div *ngIf="show1 == 'pets'">
+
+        <div class="col-sm-4 sidebar" (click)="clickedTwo($event)">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>Pets</b>
+            </li>
+            <br>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>
+                Fishes & Aquarium
+              </a>
+            </li>
+
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Dogs
+
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Othes Pets
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div *ngIf="show1 == 'services'">
+
+        <div class="col-sm-4 sidebar" (click)="clickedTwo($event)">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>Services</b>
+            </li>
+            <br>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>
+                Driver & Taxi
+              </a>
+            </li>
+
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Education & Classes
+
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Electronics & Computers
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Health & Beauty
+              </a>
+            </li>
+            <li class="nohover">
+              <a routerLinkActive="active-link" routerLink='#'>Other Services
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div *ngIf="show2 == 'Sale'">
+
+
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>For Sale</b>
+            </li>
+            <br>
             <li>
               <a>Apartments</a>
             </li>
@@ -456,11 +1094,82 @@
             <li>
               <a>Land & Plots</a>
             </li>
+            <li>
+              <a>Shops & Offices</a>
+            </li>
+            <li>
+              <a>Farm Houses</a>
+            </li>
           </ul>
         </div>
       </div>
+      <div *ngIf="show2 == 'Rent'">
 
-      <!-- <button *ngIf="modalRef" type="button" class="btn btn-danger" (click)="closeFirstModal()">Close first modal</button> -->
+
+        <div class="col-sm-3 sidebar" (click)="clickedTwo($event)">
+
+          <ul class="nav nav-sidebar">
+
+            <li>
+              <b>For Rent</b>
+            </li>
+            <br>
+            <li>
+              <a>Apartments</a>
+            </li>
+            <li>
+              <a>Houses & Villas</a>
+            </li>
+            <li>
+              <a>Builder Floors</a>
+            </li>
+            <li>
+              <a>PG & Roommates</a>
+            </li>
+            <li>
+              <a>Land & Plots</a>
+            </li>
+            <li>
+              <a>Shops & Offices</a>
+            </li>
+            <li>
+              <a>Guest Houses</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div *ngIf="show2 == 'Projects'">
+
+
+        <div class="col-sm-3 sidebar">
+
+          <ul class="nav nav-sidebar">
+            <li>
+              <b>New Projects</b>
+            </li>
+            <br>
+            <li>
+              <a>Apartments</a>
+            </li>
+            <li>
+              <a>Houses & Villas</a>
+            </li>
+            <li>
+              <a>Builder Floors</a>
+            </li>
+            <li>
+              <a>Land & Plots</a>
+            </li>
+            <li>
+              <a>Shops & Offices</a>
+            </li>
+            <li>
+              <a>Farm Houses</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
     </div>
   </div>
 </ng-template>
