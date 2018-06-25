@@ -22,7 +22,10 @@
  .deletebutton{
     text-align: right;
     float: right;
-    color: blue;
+    color: blue; 
+ }
+ .crossbutton{
+    cursor: pointer;
  }
  .fa-caret-up{
     left: 80px;

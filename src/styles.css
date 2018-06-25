@@ -16,13 +16,13 @@
     background-color: #FBFAAE;
     margin-top: 10px;
 }
-.box:hover{
+/* .box:hover{
     border: 2px solid rgb(122, 108, 201);
     padding: 8px;
     border-radius: 5px;
     
     
-}
+} */
 a:hover{
     text-decoration: none;
 }
