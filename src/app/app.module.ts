@@ -1,9 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import{RouterModule,Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { TabsModule } from 'ngx-bootstrap';
+import { BsDropdownModule } from 'ngx-bootstrap';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { AppComponent } from './app.component';
 import { CategoriesComponent } from './categories/categories.component';
@@ -26,34 +30,37 @@ import { LoginComponent } from './login/login.component';
 import { SubmitAdComponent } from './submit-ad/submit-ad.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { LoginService } from './app.service';
+import { CarSaleComponent } from './car-sale/car-sale.component';
 
 
 
 
 
-const routes:Routes=([
- 
-  { path: '', component: HomeComponent},
-  {path:"signup",component:SignupComponent},
-  {path:"login",component:LoginComponent},
-  { path:"submit-ad",component:SubmitAdComponent},
-  { path: 'categories', component: CategoriesComponent,
-  
-  children : [
-  {path : 'properties', component: PropertiesComponent},
-  { path: 'cars', component: CarsComponent},
-  { path: 'electronics', component: ElectronicsComponent},
-  { path: 'furniture', component: FurnitureComponent},
-  { path: 'jobs', component: JobsComponent},
-  { path: 'mobiles', component: MobileComponent},
-  { path: 'books', component: BooksComponent},
-  { path: 'bikes', component: BikesComponent},
-  { path: 'fashion', component: FashionComponent},
-  { path: 'services', component: ServicesComponent},
-  { path: 'pets', component: PetsComponent}
-]
-}
- ])
+const routes: Routes = ([
+
+  { path: '', component: HomeComponent },
+  { path: "signup", component: SignupComponent },
+  { path: "login", component: LoginComponent },
+  { path: "submit-ad", component: SubmitAdComponent },
+  { path: 'carSale', component: CarSaleComponent },
+  {
+    path: 'categories', component: CategoriesComponent,
+
+    children: [
+      { path: 'properties', component: PropertiesComponent },
+      { path: 'cars', component: CarsComponent },
+      { path: 'electronics', component: ElectronicsComponent },
+      { path: 'furniture', component: FurnitureComponent },
+      { path: 'jobs', component: JobsComponent },
+      { path: 'mobiles', component: MobileComponent },
+      { path: 'books', component: BooksComponent },
+      { path: 'bikes', component: BikesComponent },
+      { path: 'fashion', component: FashionComponent },
+      { path: 'services', component: ServicesComponent },
+      { path: 'pets', component: PetsComponent }
+    ]
+  }
+])
 
 @NgModule({
   declarations: [
@@ -75,14 +82,19 @@ const routes:Routes=([
     FooterComponent,
     SignupComponent,
     LoginComponent,
-    SubmitAdComponent
+    SubmitAdComponent,
+    CarSaleComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    TabsModule.forRoot(),
     RouterModule.forRoot(routes),
     ModalModule.forRoot(),
-    AccordionModule.forRoot()
+    AccordionModule.forRoot(),
+    BsDropdownModule.forRoot(),
+    BrowserAnimationsModule,
+    MatTabsModule
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]

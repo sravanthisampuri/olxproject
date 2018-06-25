@@ -223,116 +223,128 @@
      font-size:20px;
 }
 /* .callcenterBox {
-     position: fixed;
-     right: 0px;
-     top: 50%;
-     background: #fff;
-     height: 133px;
-     border: 1px solid #dedede;
-     border-right: none;
-     padding-left: 35px;
-     margin-top: -66px;
-     -webkit-border-radius: 2px 0px 0px 2px;
-     border-radius: 2px 0px 0px 2px;
-     width: 0;
-     -webkit-transition: width 0.5s;
-     transition: width 0.5s;
-     z-index: 10;
+    position: fixed;
+    right: 0px;
+    top: 50%;
+    background: #fff;
+    height: 133px;
+    border: 1px solid #dedede;
+    border-right: none;
+    padding-left: 35px;
+    margin-top: -66px;
+    -webkit-border-radius: 2px 0px 0px 2px;
+    border-radius: 2px 0px 0px 2px;
+    width: 0;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+    z-index: 10;
 }
- .callcenterBox .boxcontent {
-     width: 194px;
-     height: 111px;
-     padding-top: 22px;
-     font-size: 13px;
-     line-height: 20px;
-     text-align: center;
+.callcenterBox .boxcontent {
+    width: 194px;
+    height: 111px;
+    padding-top: 22px;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
 }
- .callcenterBox .boxcontent .number {
-     font-size: 15px;
-     margin: 6px 0px 3px;
-     font-weight: bold;
+.callcenterBox .boxcontent .number {
+    font-size: 15px;
+    margin: 6px 0px 3px;
+    font-weight: bold;
 }
- .block {
-     display: block;
+
+
+.block {
+    display: block;
 }
- .callcenterBox .boxcontent .number a {
-     color: #ff7700;
+
+.callcenterBox .boxcontent .number a {
+    color: #ff7700;
 }
- .color-1 {
-     color: #a0a0a0;
+.color-1 {
+    color: #a0a0a0;
 }
- .callcenterBox a.slider {
-     width: 35px;
-     display: block;
-     height: 133px;
-     position: absolute;
-     top: 0;
-     left: 0;
-     background:#2965be url('../../assets/images/chathelp.png') no-repeat 50% 35px;
-     color: #fff;
-     text-indent: -1000em;
-     -webkit-border-radius: 2px;
-     border-radius: 2px;
+.callcenterBox a.slider {
+    width: 35px;
+    display: block;
+    height: 133px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:#2965be url('../../assets/images/chathelp.png') no-repeat 50% 35px;
+    color: #fff;
+    text-indent: -1000em;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+} */
+.helpbox{
+    position:fixed;
+    left:86%;
+    top:52%;
+    transform: rotate(270deg);
+ 
+    
 }
- */
- .helpbox{
-     position:fixed;
-     left:78%;
-     top:50%;
-     transform: rotate(270deg);
+.helpbox .btn{
+    transform: rotate(-90deg);
+    font-size:22px;
+
 }
- .helpbox .btn{
-     transform: rotate(-90deg);
-     font-size:22px;
+
+.helpbox-text{
+    
+    transform: rotate(90deg);
+  
+    
+
 }
- .helpbox-text{
-     transform: rotate(90deg);
-     border: 1px solid rgb(17, 16, 16);
+.helpbox-text1{
+    position: absolute;
+    bottom: -48px;
+    width: 150px;
+    height: 140px;
+    left: 94px;
+    border: 1px solid rgb(17, 16, 16);
+    
+
 }
- .helpbox-text1{
-     position: absolute;
-     bottom: -48px;
-     width: 150px;
-     height: 140px;
-     left: 94px;
-     border: 1px solid rgb(17, 16, 16);
-}
- .box{
-     border: 1px solid blue;
-     border-radius: 50%;
-     background-color: blue;
-     width:25px;
-     height:25px;
-     color:white;
-}
- .shade{
-     border: 1px dashed #cbd2d7;
-     display: inline-block;
-     padding:30px;
-     background: #f4f4f4;
-     margin-right: 10px;
-     cursor: pointer;
-}
- .photo-upload .shade:first-child {
-     background: #e8f4de;
-}
- .shade label{
-     border: 1px dotted grey;
-     cursor: pointer;
-}
- .box span{
-     position: relative;
-     top: -2px;
-     font-size:20px;
-}
- .alert-info{
-     color: #fa3909 !important;
-     background:none !important;
-     border: none !important;
-}
- table{
-     border-collapse: collapse;
-}
+.box{
+    border:  1px solid blue;
+    border-radius: 50%;
+    background-color: blue;
+    width:25px;
+    height:25px;
+    color:white;
+   }
+   .shade{
+    border: 1px dashed #cbd2d7;
+    display: inline-block;
+    padding:30px;
+    background: #f4f4f4;
+    margin-right: 10px;
+    cursor: pointer;
+   }
+   .photo-upload .shade:first-child {
+    background: #e8f4de;
+   }
+   .shade label{
+    border: 1px dotted grey;
+    cursor: pointer;
+   }
+   .box span{
+    position: relative;
+    top: -2px;
+    font-size:20px;
+   }
+   .alert-info{
+   
+    color: #fa3909 !important;
+    background:none !important;
+    border: none !important;
+   }
+   table{
+    border-collapse: collapse;
+ }
  .setting-rows{
      width: 24%;
     border-color: #999999;
