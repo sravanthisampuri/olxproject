@@ -16,8 +16,12 @@
 }
 .tabs-filter{
     margin-top: 20px;
+    padding-left: 0px !important;
 }
-
+.ads{
+    padding-left:0px !important;
+    padding-right:0px !important;
+}
 .list1{
 display: inline-block;
 padding: 0px 5px;
@@ -34,4 +38,11 @@ padding: 0px 5px;
 .btn-color:hover{
     background: blue;
     color:#fff;
+}
+.tabs-wrapper{
+    text-align: left;
+}
+.gridlist{
+    padding-right: 0px !important;
+
 }

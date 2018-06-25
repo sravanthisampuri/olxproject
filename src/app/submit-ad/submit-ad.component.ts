@@ -78,16 +78,17 @@ count(tweetmsg){
      console.log(tweetmsg);
   }
 }
-counttitle(msg){
-  msg=this.log.title.length;
-  console.log(msg)
-  if(this.titlelength>=msg){
-    this.charactersleft=(this.titlelength)-(msg);
-  }
-  else{
-    msg = msg.substr(0, msg - 1);
-     console.log(msg);
-  }
+counttitle(){
+
+  // msg=this.log.title.length;
+  // console.log(msg)
+  // if(this.titlelength>=msg){
+  //   this.charactersleft=(this.titlelength)-(msg);
+  // }
+  // else{
+  //   msg = msg.substr(0, msg - 1);
+  //    console.log(msg);
+ // }
 
 }
 // limitText(limitField, limitCount, limitNum) {
