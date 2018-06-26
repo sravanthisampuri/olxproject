@@ -31,6 +31,7 @@ import { SubmitAdComponent } from './submit-ad/submit-ad.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { LoginService } from './app.service';
 import { CarSaleComponent } from './car-sale/car-sale.component';
+import { SubmitAddService } from './submitAdd.service';
 
 
 
@@ -96,7 +97,7 @@ const routes: Routes = ([
     BrowserAnimationsModule,
     MatTabsModule
   ],
-  providers: [LoginService],
+  providers: [LoginService,SubmitAddService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
