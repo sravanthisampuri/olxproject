@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0px;
+    padding: 0px;
+}
 .active-link{
     background-color: white;
     border: 1px solid red;
@@ -25,4 +29,8 @@
 } */
 a:hover{
     text-decoration: none;
+}
+
+.tabs-wrapper .nav.nav-tabs{
+    border-bottom: 1px solid transparent!important;
 }

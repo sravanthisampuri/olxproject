@@ -11,7 +11,7 @@
               </span>
             </label>
 
-            <input type="text" class="form-control" id="title" (keyup)="counttitle(x)" name="title" [(ngModel)]="log.title" #title="ngModel">
+            <input type="text" class="form-control" id="title" (keyup)="counttitle()" name="title" [(ngModel)]="log.title" #title="ngModel">
             <p class="char-length-msg">
               <b>{{charactersleft}}</b> characters left</p>
             <div [hidden]="title.dirty || title.untouched" class=" alert-info">This field is manditory please enter title</div>
@@ -224,7 +224,7 @@
     <div class="modal-body text-center">
       <div class="col-xs-12">
         <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)" (click)="clickedOne('Properties')">
-          <a routerLinkActive="active-link" routerLink='#'>
+          <a routerLinkActive="active-link" routerLink='null'>
             <div>
               <img src="assets/images/home.png" width="60%" alt="home-image">
             </div>
@@ -234,7 +234,7 @@
           </a>
         </div>
         <div class="col-xs-2 marg-bot" (click)="openModal2(templateNested)" (click)="clickedOne('cars')">
-          <a routerLinkActive="active-link" routerLink="#">
+          <a routerLinkActive="active-link" routerLink="null">
             <div>
               <img src="assets/images/car.png" width="60%" alt="car-image">
             </div>
@@ -336,6 +336,10 @@
           </a>
         </div>
       </div>
+      <mat-tab-group>
+        <mat-tab label="Tab 1">Content 1</mat-tab>
+        <mat-tab label="Tab 2">Content 2</mat-tab>
+      </mat-tab-group>
     </div>
   </div>
 </ng-template>
