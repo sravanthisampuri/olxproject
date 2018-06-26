@@ -11,7 +11,7 @@
               </span>
             </label>
 
-            <input type="text" class="form-control" id="title" (keyup)="counttitle()" name="title" [(ngModel)]="log.title" #title="ngModel">
+            <input type="text" class="form-control" id="title" (keyup)="counttitle(msg)" name="title" [(ngModel)]="log.title" #title="ngModel">
             <p class="char-length-msg">
               <b>{{charactersleft}}</b> characters left</p>
             <div [hidden]="title.dirty || title.untouched" class=" alert-info">This field is manditory please enter title</div>
