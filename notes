@@ -1,0 +1,14 @@
+local
+> ng build --prod (dist)
+git push
+
+
+server:
+> pull code
+> node
+> project-dir/npm install 
+> pm2 (sudo npm i pm2 -g)
+> pm2 start root_file.js
+> pm2 logs
+
+
