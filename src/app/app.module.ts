@@ -8,6 +8,7 @@ import { BsDropdownModule } from 'ngx-bootstrap';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CategoriesComponent } from './categories/categories.component';
@@ -95,7 +96,8 @@ const routes: Routes = ([
     AccordionModule.forRoot(),
     BsDropdownModule.forRoot(),
     BrowserAnimationsModule,
-    MatTabsModule
+    MatTabsModule,
+    HttpClientModule
   ],
   providers: [LoginService,SubmitAddService],
   bootstrap: [AppComponent]
