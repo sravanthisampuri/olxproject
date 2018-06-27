@@ -33,9 +33,14 @@
             <div [hidden]="category.dirty || category.untouched" class=" alert-info">This field is manditory please enter category</div>
 
           </div>
-          <div class="categorywidth form-group">
+          <div class="form-group pricewidth">
+              <label class="font-wt">Price
+                  <span class="important-mark">
+                    *
+                  </span>
+                </label>
             <input type="text" class="form-control" [(ngModel)]="log.price">
-          </div>
+          </div><br>
           <div class="adDescription">
             <label class="font-wt">Ad Description
               <span class="important-mark">

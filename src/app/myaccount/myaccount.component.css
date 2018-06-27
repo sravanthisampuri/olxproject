@@ -1,0 +1,24 @@
+.border{
+    height: 500px;
+    border-bottom: 1px solid lightblue;
+    border-right: 1px solid lightblue;
+    border-left: 1px solid lightblue;
+    position: relative;
+}
+.center{
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+.plus{
+    height: 5px;
+}
+.account{
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    padding-bottom: 55px;
+    padding-top: 10px;
+}
