@@ -34,3 +34,16 @@ a:hover{
 .tabs-wrapper .nav.nav-tabs{
     border-bottom: 1px solid transparent!important;
 }
+
+.panel-body {
+    padding: 15px;
+    height: 250px;
+    background-color: white;
+    border: 1px solid rgba(119, 122, 123, 0.2);
+}
+.btn{
+    font-size: 22px;
+}
+.panel-heading {
+    padding: 0px;
+}
