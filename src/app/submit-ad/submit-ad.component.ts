@@ -38,6 +38,7 @@ export class SubmitAdComponent implements OnInit {
   public show1: any;
   public show2: any;
   public show3: any;
+ 
 
 
   maxlength = 4096;
@@ -49,22 +50,31 @@ export class SubmitAdComponent implements OnInit {
 
 
   clickedOne(menuName1) {
+   
     this.show2 = '';
     this.show1 = menuName1;
+   
+    
 
   }
 
   clicked(menuName2) {
+    // console.log(menuName2)
 
     this.show2 = menuName2;
 
   }
   clickedTwo(menuName3) {
     this.modalRef2.hide();
-    this.data = menuName3.target.childNodes[0].data
-    console.log(menuName3.target.childNodes[0].data);
+
+    console.log(menuName3,this.show1)
+    this.data = menuName3.target.childNodes[0].data;
+    console.log(menuName3)
+    // console.log(menuName3.target.childNodes[0].data);
+  //  this.printdata(this.show1);
     this.log.category = this.data
   }
+
 
 
 
