@@ -8,7 +8,7 @@
 .center{
     position: absolute;
     left: 0;
-    top: 40%;
+    top: 25%;
     width: 100%;
     text-align: center;
     font-size: 18px;
@@ -21,4 +21,23 @@
     border-radius: 5px;
     padding-bottom: 55px;
     padding-top: 10px;
+}
+.navbar-inverse {
+    background-color: white;
+    border-color: white;
+    border-bottom: 1px solid lightblue;
+}
+.navbar-nav>a {
+    color:blue;
+    background-color:white;
+}
+.navbar-inverse .navbar-nav>li>a{
+    color: blue;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+    color: red;
+}
+.navbar-right{
+    margin-right: 0px;
+    margin-top: 15px;
 }
