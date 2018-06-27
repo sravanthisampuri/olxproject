@@ -1,0 +1,43 @@
+.border{
+    height: 500px;
+    border-bottom: 1px solid lightblue;
+    border-right: 1px solid lightblue;
+    border-left: 1px solid lightblue;
+    position: relative;
+}
+.center{
+    position: absolute;
+    left: 0;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+.plus{
+    height: 5px;
+}
+.account{
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    padding-bottom: 55px;
+    padding-top: 10px;
+}
+.navbar-inverse {
+    background-color: white;
+    border-color: white;
+    border-bottom: 1px solid lightblue;
+}
+.navbar-nav>a {
+    color:blue;
+    background-color:white;
+}
+.navbar-inverse .navbar-nav>li>a{
+    color: blue;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+    color: red;
+}
+.navbar-right{
+    margin-right: 0px;
+    margin-top: 15px;
+}

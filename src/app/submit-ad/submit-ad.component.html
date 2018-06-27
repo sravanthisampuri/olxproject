@@ -11,7 +11,7 @@
               </span>
             </label>
 
-            <input type="text" class="form-control" id="title" (keyup)="counttitle(msg)" name="title" [(ngModel)]="log.title" #title="ngModel">
+            <input type="text" class="form-control" id="title" maxlength="70" (keyup)="counttitle(msg)" name="title" [(ngModel)]="log.title" #title="ngModel">
             <p class="char-length-msg">
               <b>{{charactersleft}}</b> characters left</p>
             <div [hidden]="title.dirty || title.untouched" class=" alert-info">This field is manditory please enter title</div>
@@ -33,16 +33,21 @@
             <div [hidden]="category.dirty || category.untouched" class=" alert-info">This field is manditory please enter category</div>
 
           </div>
-          <div class="form-group">
+          <div class="form-group pricewidth">
+              <label class="font-wt">Price
+                  <span class="important-mark">
+                    *
+                  </span>
+                </label>
             <input type="text" class="form-control" [(ngModel)]="log.price">
-          </div>
+          </div><br>
           <div class="adDescription">
             <label class="font-wt">Ad Description
               <span class="important-mark">
                 *
               </span>
             </label>
-            <textarea class="form-control" name="description" (keyup)="count(msg)" placeholder="Include the brand,model,age and any included accessories"
+            <textarea class="form-control" name="description" maxlength="4096" (keyup)="count(msg)" placeholder="Include the brand,model,age and any included accessories"
               [(ngModel)]="log.description" #description="ngModel"></textarea>
 
 
@@ -231,7 +236,7 @@
             <div>
               <img src="assets/images/home.png" width="60%" alt="home-image">
             </div>
-            <div>
+            <div (click)="printdata(x)">
               <span>Properties</span>
             </div>
           </a>
