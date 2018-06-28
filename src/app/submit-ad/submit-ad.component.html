@@ -1,4 +1,4 @@
-<section>
+<section >
   <div class="conatiner">
     <div class="row">
       <div class="adSubmitForm">
@@ -11,7 +11,7 @@
               </span>
             </label>
 
-            <input type="text" class="form-control" id="title" (keyup)="counttitle(msg)" name="title" [(ngModel)]="log.title" #title="ngModel">
+            <input type="text" class="form-control" id="title" maxlength="70" (keyup)="counttitle(msg)" name="title" [(ngModel)]="log.title" #title="ngModel">
             <p class="char-length-msg">
               <b>{{charactersleft}}</b> characters left</p>
             <div [hidden]="title.dirty || title.untouched" class=" alert-info">This field is manditory please enter title</div>
@@ -25,7 +25,7 @@
               </span>
             </label>
 
-            <input type="text" class="form-control" id="category" name="category" [(ngModel)]="log.category"  #category="ngModel">
+            <input type="text" class="form-control" id="category" name="category" [(ngModel)]="log.category" #category="ngModel">
 
             <label for="categories">
               <img src="/assets/images/category-icon.png" id="categories">
@@ -33,13 +33,21 @@
             <div [hidden]="category.dirty || category.untouched" class=" alert-info">This field is manditory please enter category</div>
 
           </div>
+          <div class="form-group pricewidth">
+              <label class="font-wt">Price
+                  <span class="important-mark">
+                    *
+                  </span>
+                </label>
+            <input type="text" class="form-control" [(ngModel)]="log.price">
+          </div><br>
           <div class="adDescription">
             <label class="font-wt">Ad Description
               <span class="important-mark">
                 *
               </span>
             </label>
-            <textarea class="form-control" name="description" (keyup)="count(msg)" placeholder="Include the brand,model,age and any included accessories"
+            <textarea class="form-control" name="description" maxlength="4096" (keyup)="count(msg)" placeholder="Include the brand,model,age and any included accessories"
               [(ngModel)]="log.description" #description="ngModel"></textarea>
 
 
@@ -110,8 +118,8 @@
                   *
                 </span>
               </label>
-              <input [(ngModel)]="log.phnnum" #phnnum='ngModel' name="phonenmber" id="phnnum" type="text" class="form-control">
-              <div [hidden]="phnnum.dirty || phnnum.untouched" class=" alert-info">This field is manditory please mobile number</div>
+              <input [(ngModel)]="log.mobile" #mobile='ngModel' name="phonenmber" id="phnnum" type="text" class="form-control">
+              <div [hidden]="mobile.dirty || mobile.untouched" class=" alert-info">This field is manditory please mobile number</div>
 
             </div>
             <div class="form-group col-sm-offset-1 col-sm-10 cityinput">
@@ -228,7 +236,7 @@
             <div>
               <img src="assets/images/home.png" width="60%" alt="home-image">
             </div>
-            <div>
+            <div (click)="printdata(x)">
               <span>Properties</span>
             </div>
           </a>
@@ -336,10 +344,10 @@
           </a>
         </div>
       </div>
-      <mat-tab-group>
+      <!-- <mat-tab-group>
         <mat-tab label="Tab 1">Content 1</mat-tab>
         <mat-tab label="Tab 2">Content 2</mat-tab>
-      </mat-tab-group>
+      </mat-tab-group> -->
     </div>
   </div>
 </ng-template>
@@ -348,7 +356,7 @@
 <ng-template #templateNested>
   <div class="modal-content">
 
-    <div class="modal-body col-sm-12" >
+    <div class="modal-body col-sm-12">
       <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef2.hide()">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -452,7 +460,7 @@
 
       <div *ngIf="show1 == 'cars'">
 
-        <div class="col-sm-4 sidebar" >
+        <div class="col-sm-4 sidebar">
 
           <ul class="nav nav-sidebar">
             <li>
@@ -1177,3 +1185,4 @@
     </div>
   </div>
 </ng-template>
+

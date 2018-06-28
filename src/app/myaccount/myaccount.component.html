@@ -1,0 +1,140 @@
+<div class="container">
+  <div class="col-sm-12">
+    <div class="col-sm-6">
+      <h4>Your OLX Ads</h4>
+      <p>You can manage your Active & Inactive Ads here</p>
+    </div>
+    <div class="col-sm-3 col-sm-offset-3 pull-left account">
+      Account balance
+    </div>
+  </div>
+  <br>
+
+  <div>
+    <tabset>
+      <tab heading="Ads" id="tab1" class="border">
+        <div class="center">
+          <img src="./assets/images/ads1.png">
+          <br> You don't have active Ads. Place an ad now!
+          <br>
+          <br>
+          <a type="button" class="btn btn-primary btn-lg" routerLink="/submit-ad" routerLinkActive="submit-btn">
+            <span class="plus">+ </span>
+            Submit a Free Ad</a>
+        </div>
+      </tab>
+      <tab heading="Messages" class="border">
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="#">Inbox</a>
+              </li>
+              <li>
+                <a href="#">Sent</a>
+              </li>
+              <li>
+                <a href="#">Archive</a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <input type="search" placeholder="Ad title..">
+            </ul>
+          </div>
+        </nav>
+
+        <div class="center">
+          <img src="./assets/images/messages.png">
+        </div>
+      </tab>
+      <tab heading="Payments" class="border">
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="#">History</a>
+              </li>
+              <li>
+                <a href="#">E-invoices</a>
+              </li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <input type="search" placeholder="Search for payments..">
+            </ul>
+          </div>
+        </nav>
+        <div class="center">
+          Empty payment history.
+        </div>
+      </tab>
+      <tab heading="Settings" class="border">
+        <accordion class="panel-default1">
+          <accordion-group heading="Change contact details">
+            <div class="form-group ">
+              <div>
+                <label>State</label>
+                <br>
+
+                <select class="form-control">
+                  <option>Choose</option>
+                </select>
+              </div>
+              <div>
+                <label>Name*</label>
+                <br>
+                <input type="text" class="form-control">
+              </div>
+              <br>
+              <div>
+                <input type="checkbox"> Hide the link to 'All my Ads'
+              </div>
+              <br>
+              <button type="button" class="btn btn-primary save">Save</button>
+            </div>
+          </accordion-group>
+          <accordion-group heading="Change phone">
+            <div class="form-group">
+              <label>New phone</label>
+              <br>
+              <input type="text" maxlength="14" value="+91 " class="form-control">
+              <br>
+              <button type="button" class="btn btn-primary save">Save</button>
+            </div>
+          </accordion-group>
+          <accordion-group heading="Create password">
+            <div class="form-group">
+              <label>New password*</label>
+              <br>
+              <input type="text" class="form-control">
+              <br>
+              <label>Repeat new password*</label>
+              <br>
+              <input type="text" class="form-control">
+              <br>
+              <button type="button" class="btn btn-primary save">Create password</button>
+            </div>
+          </accordion-group>
+          <accordion-group heading="Change email">
+            <div class="form-group">
+              <label>New email</label><br>
+              <input type="text" class="form-control"><br>
+              <button type="button" class="btn btn-primary save">Save</button>
+            </div>
+          </accordion-group>
+          <accordion-group heading="Email notifications">
+            <input type="checkbox"> Yes, I want to receive newsletter <br><br>
+            <input type="checkbox"> Yes, I want to receive e-mail notifications of messages <br><br>
+            <input type="checkbox"> Yes, I want to receive e-mail alerts about new listings <br><br>
+            <button type="button" class="btn btn-primary save">Save</button>
+          </accordion-group>
+          <accordion-group heading="Delete account">
+            <button type="button" class="btn btn-danger delete">Delete Account</button>
+          </accordion-group>
+        </accordion>
+      </tab>
+    </tabset>
+  </div>
+</div>

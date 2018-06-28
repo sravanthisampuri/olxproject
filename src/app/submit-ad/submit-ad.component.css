@@ -73,9 +73,14 @@
      border-bottom:1px solid #e1e1e1;
 }
  .customwidth {
-     width:100%;
+     width:99%;
      text-align: center;
      padding:10px;
+}
+.pricewidth{
+    width:72%;
+    text-align: center;
+    padding:10px;
 }
  .customwidth input{
      width:55%;
@@ -94,7 +99,7 @@
      font-size:11px;
 }
  .categorywidth{
-     width: 100%;
+     width: 103%;
      margin-bottom: 10px;
      text-align: center;
      margin-left: 54px;
@@ -377,6 +382,7 @@
  .modal-content{
      height: 350px;
      width: 750px !important;
+     overflow: auto;
 }
  .nohover a:hover {
      background-color: transparent;

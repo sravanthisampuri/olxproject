@@ -4,7 +4,7 @@ body {
     padding: 0px;
 }
 .active-link{
-    background-color: white;
+    background-color:lightyellow;
     border: 1px solid rgba(158, 158, 158, 0.13);
     border-radius: 5px;
 }
@@ -33,4 +33,17 @@ a:hover{
 
 .tabs-wrapper .nav.nav-tabs{
     border-bottom: 1px solid transparent!important;
+}
+
+.panel-body {
+    padding: 15px;
+    height: 250px;
+    background-color: white;
+    border: 1px solid rgba(119, 122, 123, 0.2);
+}
+.btn{
+    font-size: 22px;
+}
+.panel-heading {
+    padding: 0px;
 }
