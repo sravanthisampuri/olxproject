@@ -8,7 +8,6 @@ import { BsDropdownModule } from 'ngx-bootstrap';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CategoriesComponent } from './categories/categories.component';
@@ -32,13 +31,8 @@ import { SubmitAdComponent } from './submit-ad/submit-ad.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { LoginService } from './app.service';
 import { CarSaleComponent } from './car-sale/car-sale.component';
-<<<<<<< HEAD
 import { loginServices } from './login.services';
 import { HttpClientModule } from '@angular/common/http';
-=======
-import { SubmitAddService } from './submitAdd.service';
-import { MyaccountComponent } from './myaccount/myaccount.component';
->>>>>>> 6d6219be9a09ef398527229a4ff38b9c72d122e3
 
 
 
@@ -51,8 +45,6 @@ const routes: Routes = ([
   { path: "login", component: LoginComponent },
   { path: "submit-ad", component: SubmitAdComponent },
   { path: 'carSale', component: CarSaleComponent },
-  { path: 'myaccount', component: MyaccountComponent },
-
   {
     path: 'categories', component: CategoriesComponent,
 
@@ -93,8 +85,7 @@ const routes: Routes = ([
     SignupComponent,
     LoginComponent,
     SubmitAdComponent,
-    CarSaleComponent,
-    MyaccountComponent
+    CarSaleComponent
   ],
   imports: [
     BrowserModule,
@@ -108,11 +99,7 @@ const routes: Routes = ([
     MatTabsModule,
     HttpClientModule
   ],
-<<<<<<< HEAD
   providers: [LoginService,loginServices],
-=======
-  providers: [LoginService,SubmitAddService],
->>>>>>> 6d6219be9a09ef398527229a4ff38b9c72d122e3
   bootstrap: [AppComponent]
 })
 export class AppModule { }
