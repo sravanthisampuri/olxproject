@@ -2,8 +2,8 @@
   <div class="row">
     <section class="col-xs-12 setting-sections">
       <div class="col-xs-12   formdetails">
-        <input type="text" placeholder="All India" class="input-type" (click)="mynewclick()" [ngModel]="textfield">
-
+        <input type="text" placeholder="All India" class="input-type" (click)="displayCities()" [ngModel]="textfield">
+        <a class="deleting-cross" *ngIf="textfield" (click)="removeSelectedCity()">X</a>
         <i class="fa fa-map-marker-alt new-navigate"></i>
         <div class="col-xs-10 noindex" *ngIf="locationSearch">
           <i class="fa fa-caret-up"></i>
@@ -11,314 +11,40 @@
             <input type="text" placeholder="Type region or city" class="region-set">
             <i class="fa fa-map-marker-alt"></i>
           </div>
-          <div class="col-sm-6 deletebutton" (click)="mynewclick()">
-           <span class="crossbutton">X</span>
+          <div class="col-sm-6 deletebutton" (click)="deleteSelectedcities()">
+            <span class="removeButton">X</span>
           </div>
           <div class="clearfix"></div>
-          <div class="col-sm-12 popular-cities" (click)= "cities($event)">
+          <div class="col-sm-12 popular-cities">
             <p>Popular cities:</p>
 
             <div class="list full  list-display">
-              <ul>
+              <ul class="col-sm-2 popularcities-margin" *ngFor="let item of citiesdata">
                 <li>
-                  <a href="#" class="link regionSelectA2" data-id="58677" data-graytext="Gujarat" data-name="Ahmedabad">
-                    <span>Ahmedabad</span>
+                  <a href="#" class="link regionSelectA2" data-id="58677" data-graytext="Gujarat">
+                    <span (click)="cities($event)">{{item}}</span>
                   </a>
                 </li>
-                <li>
-                  <a href="#" class="link regionSelectA2" data-id="58803" data-graytext="Karnataka" data-name="Bengaluru">
-                    <span>Bengaluru</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="link regionSelectA2" data-id="58651" data-graytext="Chandigarh" data-name="Chandigarh">
-                    <span>Chandigarh</span>
-                  </a>
-                </li>
+
               </ul>
-              <ul>
-                <li>
-                  <a href="#" class="link regionSelectA2" data-id="59162" data-graytext="Tamil Nadu" data-name="Chennai">
-                    <span>Chennai</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="link regionSelectA2" data-id="59164" data-graytext="Tamil Nadu" data-name="Coimbatore">
-                    <span>Coimbatore</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="link regionSelectA2" data-id="58659" data-graytext="Delhi" data-name="Delhi">
-                    <span>Delhi</span>
-                  </a>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <a href="#" class="link regionSelectA2" data-id="58748" data-graytext="Haryana" data-name="Gurgaon">
-                    <span>Gurgaon</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="link regionSelectA2" data-id="58526" data-graytext="Telangana" data-name="Hyderabad">
-                    <span>Hyderabad</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="link regionSelectA2" data-id="59123" data-graytext="Rajasthan" data-name="Jaipur">
-                    <span>Jaipur</span>
-                  </a>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <a href="#" class="link regionSelectA2" data-id="58873" data-graytext="Kerala" data-name="Kochi">
-                    <span>Kochi</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="link regionSelectA2" data-id="157275" data-graytext="West Bengal" data-name="Kolkata">
-                    <span>Kolkata</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="link regionSelectA2" data-id="59306" data-graytext="Uttar Pradesh" data-name="Lucknow">
-                    <span>Lucknow</span>
-                  </a>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <a href="#" class="link regionSelectA2" data-id="59085" data-graytext="Punjab" data-name="Ludhiana">
-                    <span>Ludhiana</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="link regionSelectA2" data-id="58997" data-graytext="Maharashtra" data-name="Mumbai">
-                    <span>Mumbai</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="link regionSelectA2" data-id="58998" data-graytext="Maharashtra" data-name="Nagpur">
-                    <span>Nagpur</span>
-                  </a>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <a href="#" class="link regionSelectA2" data-id="59014" data-graytext="Maharashtra" data-name="Pune">
-                    <span>Pune</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="link regionSelectA2" data-id="58727" data-graytext="Gujarat" data-name="Surat">
-                    <span>Surat</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="link regionSelectA2" data-id="58889" data-graytext="Kerala" data-name="Thiruvananthapuram">
-                    <span>Thiruvananthapuram</span>
-                  </a>
-                </li>
-              </ul>
+
+              <div class="clearfix"></div>
             </div>
-            <div class="viewport">
-              <div class="table full" id="regionslinks" (click)= "cities($event)">
-                <ul class="column part25 cities">
-                  <li class="selected">
-                    <a class="link regionSelectA1" data-id="" data-name="">
-                      <strong>All India</strong>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink7598" href="#" class=" link regionlink  region_link " data-id="7598" data-name="Andaman &amp; Nicobar Islands">
-                      <span>Andaman &amp; Nicobar Islands</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1145" href="#" class=" link regionlink  region_link " data-id="1145" data-name="Andhra Pradesh">
-                      <span>Andhra Pradesh</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1146" href="#" class=" link regionlink  region_link " data-id="1146" data-name="Arunachal Pradesh">
-                      <span>Arunachal Pradesh</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1147" href="#" class=" link regionlink  region_link " data-id="1147" data-name="Assam">
-                      <span>Assam</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1148" href="#" class=" link regionlink  region_link " data-id="1148" data-name="Bihar">
-                      <span>Bihar</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink58651" href="#" class="noarrow link regionlink regionSelectA2 region_link " data-id="58651" data-name="Chandigarh">
-                      <span>Chandigarh</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1178" href="#" class=" link regionlink  region_link " data-id="1178" data-name="Chhattisgarh">
-                      <span>Chhattisgarh</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1150" href="#" class=" link regionlink  region_link " data-id="1150" data-name="Dadra &amp; Nagar Haveli">
-                      <span>Dadra &amp; Nagar Haveli</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1151" href="#" class=" link regionlink  region_link " data-id="1151" data-name="Daman &amp; Diu">
-                      <span>Daman &amp; Diu</span>
-                    </a>
-                  </li>
-                </ul>
-                <ul class="column part25 cities">
-                  <li class="">
-                    <a id="regionlink1152" href="#" class="noarrow link regionlink  region_link " data-id="1152" data-name="Delhi">
-                      <span>Delhi</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1153" href="#" class=" link regionlink  region_link " data-id="1153" data-name="Goa">
-                      <span>Goa</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1154" href="#" class=" link regionlink  region_link " data-id="1154" data-name="Gujarat">
-                      <span>Gujarat</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1155" href="#" class=" link regionlink  region_link " data-id="1155" data-name="Haryana">
-                      <span>Haryana</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1156" href="#" class=" link regionlink  region_link " data-id="1156" data-name="Himachal Pradesh">
-                      <span>Himachal Pradesh</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1157" class=" link regionlink  region_link " data-id="1157" data-name="Jammu &amp; Kashmir">
-                      <span>Jammu &amp; Kashmir</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1158" href="#" class=" link regionlink  region_link " data-id="1158" data-name="Jharkhand">
-                      <span>Jharkhand</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1159" href="#" class=" link regionlink  region_link " data-id="1159" data-name="Karnataka">
-                      <span>Karnataka</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1160" href="#" class=" link regionlink  region_link " data-id="1160" data-name="Kerala">
-                      <span>Kerala</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1161" href="#" class=" link regionlink  region_link " data-id="1161" data-name="Lakshadweep">
-                      <span>Lakshadweep</span>
-                    </a>
-                  </li>
-                </ul>
-                <ul class="column part25 cities">
-                  <li class="">
-                    <a id="regionlink1162" href="#" class=" link regionlink  region_link " data-id="1162" data-name="Madhya Pradesh">
-                      <span>Madhya Pradesh</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1163" href="#" class=" link regionlink  region_link " data-id="1163" data-name="Maharashtra">
-                      <span>Maharashtra</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1164" href="#" class=" link regionlink  region_link " data-id="1164" data-name="Manipur">
-                      <span>Manipur</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1165" href="#" class=" link regionlink  region_link " data-id="1165" data-name="Meghalaya">
-                      <span>Meghalaya</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1166" href="#" class=" link regionlink  region_link " data-id="1166" data-name="Mizoram">
-                      <span>Mizoram</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1167" href="#" class=" link regionlink  region_link " data-id="1167" data-name="Nagaland">
-                      <span>Nagaland</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1168" href="#" class=" link regionlink  region_link " data-id="1168" data-name="Odisha">
-                      <span>Odisha</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1169" href="#" class=" link regionlink  region_link " data-id="1169" data-name="Pondicherry">
-                      <span>Pondicherry</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1170" href="#" class=" link regionlink  region_link " data-id="1170" data-name="Punjab">
-                      <span>Punjab</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1171" href="#" class=" link regionlink  region_link " data-id="1171" data-name="Rajasthan">
-                      <span>Rajasthan</span>
-                    </a>
-                  </li>
-                </ul>
-                <ul class="column part25 cities">
-                  <li class="">
-                    <a id="regionlink1172" href="#" class=" link regionlink  region_link " data-id="1172" data-name="Sikkim">
-                      <span>Sikkim</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1173" href="#" class=" link regionlink  region_link " data-id="1173" data-name="Tamil Nadu">
-                      <span>Tamil Nadu</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink7599" href="#" class=" link regionlink  region_link " data-id="7599" data-name="Telangana">
-                      <span>Telangana</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1174" href="#" class=" link regionlink  region_link " data-id="1174" data-name="Tripura">
-                      <span>Tripura</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1176" href="#" class=" link regionlink  region_link " data-id="1176" data-name="Uttar Pradesh">
-                      <span>Uttar Pradesh</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1175" href="#" class=" link regionlink  region_link " data-id="1175" data-name="Uttaranchal">
-                      <span>Uttaranchal</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a id="regionlink1177" href="#" class=" link regionlink  region_link " data-id="1177" data-name="West Bengal">
-                      <span>West Bengal</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="table full hidden subregionslinks" id="subregionslinks"></div>
+
+            <div class="viewport col-sm-12">
+
+                <div class="col-sm-3 allindiacities"  *ngFor="let i of statesdata">
+                    <ul>
+  
+                        <li class="">
+                          <a id="regionlink7598" href="#">
+                            <span (click)="cities($event)">{{i}}</span>
+                          </a>
+                        </li>
+        
+                      </ul>
+                </div>
+                <div class="clearfix"></div>
             </div>
           </div>
           <div class="clearfix"></div>
