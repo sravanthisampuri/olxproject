@@ -16,23 +16,14 @@ export class LoginComponent implements OnInit {
     email: ''
 
 
-<<<<<<< HEAD
 };
 public udata : any;
 public profile:any;
 
+
   constructor(
     private route : Router,
     private  LoginServices : loginServices
-=======
-  };
-  public udata: any;
-
-  constructor(
-    private route: Router,
-    //private loginDetailsService: LoginDetailsService
-
->>>>>>> 6d6219be9a09ef398527229a4ff38b9c72d122e3
   ) { }
 
   ngOnInit() {
@@ -48,16 +39,14 @@ public profile:any;
     }
 
     else {
-       if(this.udata.email == localStorage.getItem('email') && this.udata.password == localStorage.getItem('password'))
+      //  if(this.udata.email == localStorage.getItem('email') && this.udata.password == localStorage.getItem('password'))
       // this.loginDetailsService.submitAdd(this.loginData)
       //   .subscribe(
       //     function (response) {
       //       console.log(response)
       //     }
-      //   )
 
-<<<<<<< HEAD
-   else{
+  //  else{
     this.LoginServices.SubmitLogin(this.udata)
 
     .subscribe(
@@ -72,27 +61,17 @@ public profile:any;
   }
 
   onSignIn(googleUser){
-    console.log(googleUser);
-    this.profile = googleUser.getBasicProfile();
-  console.log('ID: ' + this.profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + this.profile.getName());
-  console.log('Image URL: ' + this.profile.getImageUrl());
-  console.log('Email: ' + this.profile.getEmail()); // This is null if the 'email' scope is not present.
-=======
-       {
-         //this.route.navigate([''])
-       }
-    else    {
-  alert("invalid credentials")
- }
+      console.log(googleUser);
+      this.profile = googleUser.getBasicProfile();
+    console.log('ID: ' + this.profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + this.profile.getName());
+    console.log('Image URL: ' + this.profile.getImageUrl());
+    console.log('Email: ' + this.profile.getEmail()); // This is null if the 'email' scope is not present.
   }
-
-
-
->>>>>>> 6d6219be9a09ef398527229a4ff38b9c72d122e3
 }
 
-  }
+
+
 
 
 
