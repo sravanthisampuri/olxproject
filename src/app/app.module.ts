@@ -33,6 +33,7 @@ import { LoginService } from './app.service';
 import { CarSaleComponent } from './car-sale/car-sale.component';
 import { loginServices } from './login.services';
 import { HttpClientModule } from '@angular/common/http';
+import{ FilterPipe} from './app.filter';
 
 
 
@@ -85,7 +86,8 @@ const routes: Routes = ([
     SignupComponent,
     LoginComponent,
     SubmitAdComponent,
-    CarSaleComponent
+    CarSaleComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

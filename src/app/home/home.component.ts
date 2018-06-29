@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   data;
+  // public filtering : boolean=false;
   public citiesdata: any =["Ahmedabad","Bengaluru","Chandigarh","Chennai","Coimbatore","Delhi",
   "Gurgaon","Hyderabad","Jaipur","Kochi","Kolkata","Lucknow","Ludhiana","Mumbai","Nagpur","Pune","Surat",
    "Thiruvananthapuram"];

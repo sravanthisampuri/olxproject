@@ -8,7 +8,13 @@
         <div class="col-xs-10 noindex" *ngIf="locationSearch">
           <i class="fa fa-caret-up"></i>
           <div class="col-xs-5 title">
-            <input type="text" placeholder="Type region or city" class="region-set">
+            <input type="search" placeholder="Type region or city" class="region-set" [(ngModel)]="search">
+            <div  class="filter-search">
+              <div *ngFor="let g of citiesdata | filter:search" class="filter-borders">
+               <span (click)="cities($event)"> {{g}}</span>
+              </div>
+            </div>
+            
             <i class="fa fa-map-marker-alt"></i>
           </div>
           <div class="col-sm-6 deletebutton" (click)="deleteSelectedcities()">
