@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+//import { LoginDetails} from '../loginDetails.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private route: Router,
-    //private loginDetailsService: LoginDetailsService
+    //private loginDetails: LoginDetails
 
   ) { }
 
@@ -37,19 +37,19 @@ export class LoginComponent implements OnInit {
 
     else {
        if(this.udata.email == localStorage.getItem('email') && this.udata.password == localStorage.getItem('password'))
-      // this.loginDetailsService.submitAdd(this.loginData)
+      // this.loginDetails.submitDetails(this.loginData)
       //   .subscribe(
       //     function (response) {
       //       console.log(response)
       //     }
       //   )
 
-       {
-         //this.route.navigate([''])
-       }
-    else    {
-  alert("invalid credentials")
- }
+        {
+          this.route.navigate(['myaccount'])
+        }
+     else    {
+   alert("invalid credentials")
+  }
   }
 
 

@@ -34,6 +34,7 @@ import { LoginService } from './app.service';
 import { CarSaleComponent } from './car-sale/car-sale.component';
 import { SubmitAddService } from './submitAdd.service';
 import { MyaccountComponent } from './myaccount/myaccount.component';
+//import { LoginDetails} from './loginDetails.service';
 
 
 

@@ -1,14 +1,14 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { Http} from "@angular/http";
 
 @Injectable()
-export class LoginDetailsService {
+export class LoginDetails {
 
     constructor(
-        private http : HttpClient
+        private http : Http
     ){}
 
-    submitAdd(addDetails){
+    submitDetails(addDetails){
         return this.http.post( "http://localhost:3001/v1/add/createAdd" , addDetails )
     }
 
