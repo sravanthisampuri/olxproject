@@ -1,5 +1,5 @@
 .border{
-    height: 500px;
+    height: 650px;
     border-bottom: 1px solid lightblue;
     border-right: 1px solid lightblue;
     border-left: 1px solid lightblue;
@@ -21,6 +21,7 @@
     border-radius: 5px;
     padding-bottom: 55px;
     padding-top: 10px;
+    margin-top: 22px;
 }
 .navbar-inverse {
     background-color: white;
@@ -41,3 +42,20 @@
     margin-right: 0px;
     margin-top: 15px;
 }
+.panel-default1 {
+    margin-top: 0px;
+    margin: 10px
+}
+.form-control{
+    width: 25%;
+}
+.save{
+    font-size: 18px;
+    padding: 3px 22px;
+}
+.delete{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+

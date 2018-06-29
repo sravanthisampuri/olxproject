@@ -19,12 +19,21 @@
     top: 70px;
     padding: 0px;
  }
+ .deleting-cross{
+    position: absolute;
+    left: 74px;
+    z-index: 13;
+    width: 10%;
+    text-align: right;
+    top: 28px;
+    cursor: pointer;
+ }
  .deletebutton{
     text-align: right;
     float: right;
     color: blue; 
  }
- .crossbutton{
+ .removeButton{
     cursor: pointer;
  }
  .fa-caret-up{
@@ -52,7 +61,29 @@
     display: table-cell;
     padding: 0px;
     margin: 0px;
-    width: 18%;
+    /* width: 18%; */
+ }
+ .popularcities-margin{
+     margin-left: 15px;
+ }
+ .popularcities-margin>li>a:hover{
+     color: #f70;
+ }
+ .allindiacities{
+     /* border-left: 1px solid black; */
+    overflow: auto;
+ }
+ .allindiacities ul{
+    padding: 5px 0px;
+ }
+ .allindiacities ul li{
+    list-style: none;
+ }
+ /* .allindiacities ul li a{
+    padding: 6px 28px 6px 12px;
+ } */
+ .allindiacities ul li a:hover{
+     color: #f70;
  }
  .list-display li{
     list-style: none;
@@ -65,6 +96,7 @@
     border-top: 1px solid #cccccc;
     height: 290px;
     overflow: auto;
+    background-color: white;
  }
  .viewport > .table {
     height: 100%;

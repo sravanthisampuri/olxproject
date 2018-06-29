@@ -7,14 +7,5 @@ export class LoginService{
         private http : Http
     ){ }
     
-    login(userdata){
-        console.log(userdata);
-        return ;
-    }
-    getData(userID){
-        let headers= new Headers();
-        headers.append('token',localStorage.getItem('token'));
-
-    }
 
 }
