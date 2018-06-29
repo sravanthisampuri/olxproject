@@ -50,7 +50,7 @@ export class SubmitAdComponent implements OnInit {
 
 
   clickedOne(menuName1) {
-   
+    console.log(menuName1)
     this.show2 = '';
     this.show1 = menuName1;
    
@@ -68,7 +68,7 @@ export class SubmitAdComponent implements OnInit {
     this.modalRef2.hide();
 
     console.log(menuName3,this.show1)
-    this.data = menuName3.target.childNodes[0].data;
+    this.data =  this.show1 +" >> "+this.show2+ " >> "+ menuName3.target.childNodes[0].data ;
     console.log(menuName3)
     // console.log(menuName3.target.childNodes[0].data);
   //  this.printdata(this.show1);
