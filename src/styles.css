@@ -19,6 +19,7 @@ body {
     border-color:white;
     background-color: #FBFAAE;
     margin-top: 10px;
+    border-radius: 8px;
 }
 /* .box:hover{
     border: 2px solid rgb(122, 108, 201);
@@ -37,13 +38,12 @@ a:hover{
 
 .panel-body {
     padding: 15px;
-    height: 250px;
-    background-color: white;
-    border: 1px solid rgba(119, 122, 123, 0.2);
+    
+}
+
+.panel-heading {
+    padding: 0px;
 }
 .btn{
     font-size: 22px;
-}
-.panel-heading {
-    padding: 0px;
 }

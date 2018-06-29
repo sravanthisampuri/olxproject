@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-//import { LoginDetails} from '../loginDetails.service';
+import { loginServices } from '../login.services';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,13 +16,14 @@ export class LoginComponent implements OnInit {
     email: ''
 
 
-  };
-  public udata: any;
+};
+public udata : any;
+public profile:any;
+
 
   constructor(
-    private route: Router,
-    //private loginDetails: LoginDetails
-
+    private route : Router,
+    private  LoginServices : loginServices
   ) { }
 
   ngOnInit() {
@@ -36,23 +39,39 @@ export class LoginComponent implements OnInit {
     }
 
     else {
-       if(this.udata.email == localStorage.getItem('email') && this.udata.password == localStorage.getItem('password'))
-      // this.loginDetails.submitDetails(this.loginData)
+      //  if(this.udata.email == localStorage.getItem('email') && this.udata.password == localStorage.getItem('password'))
+      // this.loginDetailsService.submitAdd(this.loginData)
       //   .subscribe(
       //     function (response) {
       //       console.log(response)
       //     }
-      //   )
 
-        {
-          this.route.navigate(['myaccount'])
-        }
-     else    {
-   alert("invalid credentials")
+  //  else{
+    this.LoginServices.SubmitLogin(this.udata)
+
+    .subscribe(
+          function(response){
+            console.log(response)
+          }
+        )
+     
+    this.route.navigate([''])
+   }
+   
   }
+
+  onSignIn(googleUser){
+      console.log(googleUser);
+      this.profile = googleUser.getBasicProfile();
+    console.log('ID: ' + this.profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + this.profile.getName());
+    console.log('Image URL: ' + this.profile.getImageUrl());
+    console.log('Email: ' + this.profile.getEmail()); // This is null if the 'email' scope is not present.
   }
-
-
-
 }
-}
+
+
+
+
+
+

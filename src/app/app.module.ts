@@ -30,11 +30,11 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { SubmitAdComponent } from './submit-ad/submit-ad.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { LoginService } from './app.service';
+
 import { CarSaleComponent } from './car-sale/car-sale.component';
-import { SubmitAddService } from './submitAdd.service';
-import { MyaccountComponent } from './myaccount/myaccount.component';
-//import { LoginDetails} from './loginDetails.service';
+import { loginServices } from './login.services';
+import {SubmitAddService} from './submitAdd.service';
+import { MyaccountComponent } from './myaccount/myaccount.component'
 
 
 
@@ -104,7 +104,7 @@ const routes: Routes = ([
     MatTabsModule,
     HttpClientModule
   ],
-  providers: [LoginService,SubmitAddService],
+  providers: [loginServices,SubmitAddService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
