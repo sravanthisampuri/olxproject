@@ -8,7 +8,6 @@ import { BsDropdownModule } from 'ngx-bootstrap';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CategoriesComponent } from './categories/categories.component';
@@ -30,11 +29,11 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { SubmitAdComponent } from './submit-ad/submit-ad.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
-
+import { LoginService } from './app.service';
 import { CarSaleComponent } from './car-sale/car-sale.component';
 import { loginServices } from './login.services';
-import {SubmitAddService} from './submitAdd.service';
-import { MyaccountComponent } from './myaccount/myaccount.component'
+import { HttpClientModule } from '@angular/common/http';
+import{ FilterPipe} from './app.filter';
 
 
 
@@ -47,8 +46,6 @@ const routes: Routes = ([
   { path: "login", component: LoginComponent },
   { path: "submit-ad", component: SubmitAdComponent },
   { path: 'carSale', component: CarSaleComponent },
-  { path: 'myaccount', component: MyaccountComponent },
-
   {
     path: 'categories', component: CategoriesComponent,
 
@@ -90,7 +87,7 @@ const routes: Routes = ([
     LoginComponent,
     SubmitAdComponent,
     CarSaleComponent,
-    MyaccountComponent
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -104,7 +101,7 @@ const routes: Routes = ([
     MatTabsModule,
     HttpClientModule
   ],
-  providers: [loginServices,SubmitAddService],
+  providers: [LoginService,loginServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
