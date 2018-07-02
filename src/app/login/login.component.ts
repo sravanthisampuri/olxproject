@@ -55,7 +55,7 @@ public profile:any;
           }
         )
      
-    this.route.navigate([''])
+    this.route.navigate(['myaccount'])
    }
    
   }

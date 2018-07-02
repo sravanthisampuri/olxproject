@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  data;
+  public data;
   public citiesdata: any =["Ahmedabad","Bengaluru","Chandigarh","Chennai","Coimbatore","Delhi",
   "Gurgaon","Hyderabad","Jaipur","Kochi","Kolkata","Lucknow","Ludhiana","Mumbai","Nagpur","Pune","Surat",
    "Thiruvananthapuram"];
