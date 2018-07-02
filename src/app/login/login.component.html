@@ -18,9 +18,9 @@
                         <input type="checkbox" value="remember-me"> Remember me
                     </label>
                 </div>
-                <a routerLink='/myaccount'>
+                
                 <button (click)="loginUser()" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
-            </a>
+            
             </form>
             <!-- /form -->
             <a href="#" class="forgot-password">
@@ -32,11 +32,10 @@
             <div class="row">
                 <button class="btn col-xs-5 btn-facebook">
                     <i class="fab fa-facebook-f"></i>   Login with facebook</button>
-                  <button  class="g-signin2 btn-google" data-onsuccess="onSignIn"  (click)="onSignIn()">
+                  <button  class="g-signin2 btn-google" data-onsuccess="onSignIn"  (click)="onSignIn(x)">
                     <i class="fab fa-google-plus-g"></i>  Login with Google</button>
                     </div>
         </div>
-        <!-- /card-container -->
+        
     </div>
 </div>
-<!-- /container -->
