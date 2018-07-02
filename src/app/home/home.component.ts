@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
     "assets/images/olx4.gif", "assets/images/olx5.gif", "assets/images/olx6.gif"];
   public display: any = ["assets/images/olx.gif"];
   public i: any = 1;
+  public search : any;
   constructor() { }
 
   ngOnInit() {
