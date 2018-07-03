@@ -34,6 +34,8 @@ import { CarSaleComponent } from './car-sale/car-sale.component';
 import { loginServices } from './login.services';
 import { HttpClientModule } from '@angular/common/http';
 import{ FilterPipe} from './app.filter';
+import { MyaccountComponent } from './myaccount/myaccount.component';
+import { SubmitAddService } from './submitAdd.service';
 
 
 
@@ -46,6 +48,8 @@ const routes: Routes = ([
   { path: "login", component: LoginComponent },
   { path: "submit-ad", component: SubmitAdComponent },
   { path: 'carSale', component: CarSaleComponent },
+  { path: 'myaccount', component: MyaccountComponent},
+
   {
     path: 'categories', component: CategoriesComponent,
 
@@ -87,7 +91,9 @@ const routes: Routes = ([
     LoginComponent,
     SubmitAdComponent,
     CarSaleComponent,
-    FilterPipe
+    FilterPipe,
+    MyaccountComponent
+
   ],
   imports: [
     BrowserModule,
@@ -101,7 +107,7 @@ const routes: Routes = ([
     MatTabsModule,
     HttpClientModule
   ],
-  providers: [LoginService,loginServices],
+  providers: [LoginService,loginServices,SubmitAddService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
