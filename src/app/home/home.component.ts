@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   public data;
+  public search;
   public citiesdata: any =["Ahmedabad","Bengaluru","Chandigarh","Chennai","Coimbatore","Delhi",
   "Gurgaon","Hyderabad","Jaipur","Kochi","Kolkata","Lucknow","Ludhiana","Mumbai","Nagpur","Pune","Surat",
    "Thiruvananthapuram"];
@@ -48,6 +49,7 @@ export class HomeComponent implements OnInit {
     console.log(this.data);
     this.textfield = this.data;
     this.locationSearch=false;
+    this.search='';
   }
   removeSelectedCity(){
     this.textfield="";

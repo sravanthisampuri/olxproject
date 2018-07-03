@@ -10,7 +10,7 @@
           <div class="col-xs-5 title">
             <input type="search" placeholder="Type region or city" class="region-set" [(ngModel)]="search">
             <div class="filter-search" *ngIf="search">
-              <div *ngFor="let g of citiesdata | filter:search" class="filter-borders">
+              <div *ngFor="let g of combineddata | filter:search" class="filter-borders">
                 <span (click)="cities($event)"> {{g}}</span>
               </div>
             </div>
@@ -25,7 +25,7 @@
             <p>Popular cities:</p>
 
             <div class="list full  list-display">
-              <ul class="col-sm-2 popularcities-margin" *ngFor="let item of citiesdata | filter:search">
+              <ul class="col-sm-2 popularcities-margin" *ngFor="let item of citiesdata">
                 <li>
                   <a href="#" class="link regionSelectA2" data-id="58677" data-graytext="Gujarat">
                     <span (click)="cities($event)">{{item}}</span>
