@@ -20,6 +20,8 @@ export class LoginComponent implements OnInit {
 public udata : any;
 public profile:any;
 
+public loginggedInUserDetails : any;
+
 
   constructor(
     private route : Router,
@@ -55,7 +57,7 @@ public profile:any;
           }
         )
      
-    this.route.navigate([''])
+    
    }
    
   }
@@ -66,7 +68,9 @@ public profile:any;
     console.log('ID: ' + this.profile.getId()); // Do not send to your backend! Use an ID token instead.
     console.log('Name: ' + this.profile.getName());
     console.log('Image URL: ' + this.profile.getImageUrl());
-    console.log('Email: ' + this.profile.getEmail()); // This is null if the 'email' scope is not present.
+    console.log('Email: ' + this.profile.getEmail());
+    this.route.navigate(['/myaccount'])
+     // This is null if the 'email' scope is not present.
   }
 }
 

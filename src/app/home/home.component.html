@@ -2,13 +2,15 @@
   <div class="row">
     <section class="col-xs-12 setting-sections">
       <div class="col-xs-12   formdetails">
-        <input type="text" placeholder="All India" class="input-type" (click)="displayCities()" [ngModel]="textfield">
+        <input type="text" placeholder="All India" class="input-type" (click)="displayCities()"  [ngModel]="textfield">
         <a class="deleting-cross" *ngIf="textfield" (click)="removeSelectedCity()">X</a>
         <i class="fa fa-map-marker-alt new-navigate"></i>
         <div class="col-xs-10 noindex" *ngIf="locationSearch">
           <i class="fa fa-caret-up"></i>
           <div class="col-xs-5 title">
-            <input type="text" placeholder="Type region or city" class="region-set">
+            <input type="text" placeholder="Type region or city" (keyup)="filtercities(x)"  
+            name="states" [(ngModel)]="logfilter.states" #states="ngModel" 
+            class="region-set">
             <i class="fa fa-map-marker-alt"></i>
           </div>
           <div class="col-sm-6 deletebutton" (click)="deleteSelectedcities()">
