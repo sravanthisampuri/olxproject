@@ -167,6 +167,30 @@
     padding: 0px;
     border: 2px solid white;
  }
+ .filter-search{
+    margin-top: 0px;
+    top: 82%;
+    left: 0px;
+    width: auto !important;
+    min-width: 405px;
+    z-index: 10;
+    max-height: 200px;
+    overflow: auto;
+    text-shadow: 0 0 0 transparent;
+    border: 1px solid #cccccc;
+    background: #fff;
+    line-height: 16px;
+    position: absolute;
+ }
+ .filter-borders{
+     border-bottom: 1px solid #cccccc;
+     padding:10px;
+     cursor: pointer;
+     text-align: left;
+ }
+ .filter-borders:hover{
+     color: #f70;
+ }
  .banner-image{
     background-color: black; height: 300px;margin:10px 0px;padding: 0px;
  }
