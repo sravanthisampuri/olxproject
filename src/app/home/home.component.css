@@ -19,6 +19,9 @@
     top: 70px;
     padding: 0px;
  }
+ .allindiacolorchange{
+     color: #f70;
+ }
  .deleting-cross{
     position: absolute;
     left: 74px;

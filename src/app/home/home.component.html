@@ -10,7 +10,7 @@
           <div class="col-xs-5 title">
             <input type="search" placeholder="Type region or city" class="region-set" [(ngModel)]="search">
             <div class="filter-search" *ngIf="search">
-              <div *ngFor="let g of statesdata | filter:search" class="filter-borders">
+              <div *ngFor="let g of country | filter:search" class="filter-borders">
                 <span (click)="cities($event)"> {{g}}</span>
               </div>
             </div>
@@ -40,10 +40,10 @@
             <div class="viewport col-sm-12">
 
               <div class="col-sm-3 allindiacities" *ngFor="let i of statesdata">
-                <ul>
+                <ul class="slect-child">
 
-                  <li class="">
-                    <a id="regionlink7598" href="#">
+                  <li>
+                    <a id="regionlink7598" href="#" [ngClass]="{'allindiacolorchange':i=='All India'}">
                       <span (click)="cities($event)">{{i}}</span>
                     </a>
                   </li>
