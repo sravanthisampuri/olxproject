@@ -51,20 +51,16 @@ loginUser(){
    
   }
 
-  onSignIn(googleUser){
-    console.log(googleUser);
-    // this.profile = googleUser.getBasicProfile();
-  // console.log('ID: ' + this.profile.getId()); // Do not send to your backend! Use an ID token instead.
-  // console.log('Name: ' + this.profile.getName());
-  // console.log('Image URL: ' + this.profile.getImageUrl());
-  // console.log('Email: ' + this.profile.getEmail()); // This is null if the 'email' scope is not present.
-  // if(this.profile==this.profile.getId()){
-  //   this.route.navigate(['/myaccount']);
+  // onSignIn(googleUser){
+  //     console.log(googleUser);
+  //     this.profile = googleUser.getBasicProfile();
+  //   console.log('ID: ' + this.profile.getId()); // Do not send to your backend! Use an ID token instead.
+  //   console.log('Name: ' + this.profile.getName());
+  //   console.log('Image URL: ' + this.profile.getImageUrl());
+  //   console.log('Email: ' + this.profile.getEmail()); // This is null if the 'email' scope is not present.
   // }
-  // else{
-  //   alert("credentials are not correct");
-  // }
-}
+// 
+
 
 
   }
