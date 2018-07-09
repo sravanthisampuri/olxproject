@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
   data;
   public country: any=[];
   // public filtering : boolean=false;
+  
   public citiesdata: any = ["Ahmedabad", "Bengaluru", "Chandigarh", "Chennai", "Coimbatore", "Delhi",
     "Gurgaon", "Hyderabad", "Jaipur", "Kochi", "Kolkata", "Lucknow", "Ludhiana", "Mumbai", "Nagpur", "Pune", "Surat",
     "Thiruvananthapuram"];
@@ -25,7 +26,7 @@ export class HomeComponent implements OnInit {
   public url: any = ["assets/images/olx.gif", "assets/images/olx1.gif", "assets/images/olx3.gif",
     "assets/images/olx4.gif", "assets/images/olx5.gif", "assets/images/olx6.gif"];
   public display: any = ["assets/images/olx.gif"];
-  public i: any = 1;  
+  public i: any = 1;
   public search: any;
   constructor() { }
 

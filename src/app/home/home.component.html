@@ -40,10 +40,10 @@
             <div class="viewport col-sm-12">
 
               <div class="col-sm-3 allindiacities" *ngFor="let i of statesdata">
-                <ul>
+                <ul class="slect-child">
 
-                  <li class="">
-                    <a id="regionlink7598" href="#">
+                  <li>
+                    <a id="regionlink7598" href="#" [ngClass]="{'allindiacolorchange':i=='All India'}">
                       <span (click)="cities($event)">{{i}}</span>
                     </a>
                   </li>
