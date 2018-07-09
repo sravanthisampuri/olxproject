@@ -134,7 +134,7 @@ MIT
 MIT
 MIT
 
-ngx-bootstrap@3.0.1
+ngx-bootstrap@3.0.0
 MIT
 The MIT License (MIT)
 
