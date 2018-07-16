@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   data;
-  public combineddata: any
+  public country: any=[];
   // public filtering : boolean=false;
-  public country=[];
+  
   public citiesdata: any = ["Ahmedabad", "Bengaluru", "Chandigarh", "Chennai", "Coimbatore", "Delhi",
     "Gurgaon", "Hyderabad", "Jaipur", "Kochi", "Kolkata", "Lucknow", "Ludhiana", "Mumbai", "Nagpur", "Pune", "Surat",
     "Thiruvananthapuram"];
@@ -31,10 +31,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.country=this.statesdata.concat(this.citiesdata);
-    // this.citiesdata.forEach(city => {
-    //   this.country.push(city);
-    // });
+    this.country = this.citiesdata.concat(this.statesdata);
   }
   myclick() {
     this.i < this.url.length ? this.display = this.url[this.i] : this.url[this.i = 0];
