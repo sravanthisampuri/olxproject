@@ -41,6 +41,7 @@ import { SubmitAddService } from './submitAdd.service';
 
 
 
+
 const routes: Routes = ([
 
   { path: '', component: HomeComponent },
@@ -93,6 +94,7 @@ const routes: Routes = ([
     CarSaleComponent,
     FilterPipe,
     MyaccountComponent
+    
 
   ],
   imports: [
