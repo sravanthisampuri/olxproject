@@ -9,7 +9,6 @@ import { AuthGaurd } from './app.authgaurd';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CategoriesComponent } from './categories/categories.component';
@@ -32,11 +31,12 @@ import { LoginComponent } from './login/login.component';
 import { SubmitAdComponent } from './submit-ad/submit-ad.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { SubmitAddService } from './submitAdd.service';
-// import { loginServices } from './app.service';
-// import { FilterPipe } from './app.filterPipe';
 import { CarSaleComponent } from './car-sale/car-sale.component';
 import { loginServices } from './login.services';
-import { MyaccountComponent } from './myaccount/myaccount.component'
+import { HttpClientModule } from '@angular/common/http';
+import{ FilterPipe} from './app.filter';
+import { MyaccountComponent } from './myaccount/myaccount.component';
+
 
 
 
@@ -49,7 +49,7 @@ const routes: Routes = ([
   { path: "login", component: LoginComponent },
   { path: "submit-ad", component: SubmitAdComponent },
   { path: 'carSale', component: CarSaleComponent },
-  { path: 'myaccount', component: MyaccountComponent },
+  { path: 'myaccount', component: MyaccountComponent},
 
   {
     path: 'categories', component: CategoriesComponent,
@@ -92,8 +92,9 @@ const routes: Routes = ([
     LoginComponent,
     SubmitAdComponent,
     CarSaleComponent,
-    MyaccountComponent,
-    // FilterPipe
+    FilterPipe,
+    MyaccountComponent
+
   ],
   imports: [
     BrowserModule,
@@ -107,7 +108,7 @@ const routes: Routes = ([
     MatTabsModule,
     HttpClientModule
   ],
-  providers: [loginServices,AuthGaurd,SubmitAddService],
+  providers: [loginServices,SubmitAddService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

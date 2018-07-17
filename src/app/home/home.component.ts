@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
   logfilter = {
     states: ''
   }
+  public search :any;
+  public countries =[];
   public citiesdata: any = ["Ahmedabad", "Bengaluru", "Chandigarh", "Chennai", "Coimbatore", "Delhi",
     "Gurgaon", "Hyderabad", "Jaipur", "Kochi", "Kolkata", "Lucknow", "Ludhiana", "Mumbai", "Nagpur", "Pune", "Surat",
     "Thiruvananthapuram"];
@@ -35,6 +37,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.countries = this.statesdata.concat(this.citiesdata)
   }
   myclick() {
     this.i < this.url.length ? this.display = this.url[this.i] : this.url[this.i = 0];
@@ -44,7 +47,6 @@ export class HomeComponent implements OnInit {
   displayCities() {
 
     this.locationSearch = true;
-
 
   }
   deleteSelectedcities() {
@@ -58,28 +60,9 @@ export class HomeComponent implements OnInit {
     console.log(this.data);
     this.textfield = this.data;
     this.locationSearch = false;
+    this.search = '';
   }
   removeSelectedCity() {
     this.textfield = "";
-  }
-  filtercities(search) {
-    search = this.logfilter.states
-    this.citylen = this.citiesdata.length;
-    console.log(search, this.citiesdata)
-    if (search === undefined) {
-      this.filteredData = [];
-    } else {
-      this.filteredData = [];
-      for (var i = 0; i <= this.citylen; i++) {
-        for (var j = 0; j <= this.citylen; j++) {
-          console.log(this.statesdata[i][j])
-          if (this.statesdata[i][j].indexOf(search) >= 0) {
-            this.filteredData.push(this.statesdata[i]);
-          }
-        }
-      }
-    }
-    console.log(this.filteredData)
-    return this.filteredData;
   }
 }
