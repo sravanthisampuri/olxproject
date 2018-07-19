@@ -40,10 +40,10 @@
             <div class="viewport col-sm-12">
 
               <div class="col-sm-3 allindiacities" *ngFor="let i of statesdata">
-                <ul>
+                <ul class="slect-child">
 
-                  <li class="">
-                    <a id="regionlink7598" href="#">
+                  <li>
+                    <a id="regionlink7598" href="#" [ngClass]="{'allindiacolorchange':i=='All India'}">
                       <span (click)="cities($event)">{{i}}</span>
                     </a>
                   </li>
@@ -60,19 +60,21 @@
       </div>
     </section>
 
-    <div class="col-xs-12  banner-image">
-      <div class="container">
-        <div id="myCarousel" class="carousel slide  col-sm-6" data-ride="carousel">
+    <div class="col-xs-12" style="padding:10px 0px 10px 0px;">
+      <!-- <div class="container"> -->
+
+        <img src="https://tpc.googlesyndication.com/simgad/5273865459601559752" width="100%">
+        <!-- <div id="myCarousel" class="carousel slide  col-sm-6" data-ride="carousel"> -->
           <!-- Indicators -->
-          <ol class="carousel-indicators">
+          <!-- <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
             <li data-target="#myCarousel" data-slide-to="3"></li>
-          </ol>
+          </ol> -->
 
           <!-- Wrapper for slides -->
-          <div class="carousel-inner carousel-set">
+          <!-- <div class="carousel-inner carousel-set">
 
             <div class="item active">
               <img src="assets/images/olx8.jpg" alt="Los Angeles" style="width:100%; height:300px">
@@ -96,13 +98,13 @@
                 <h3>new add can give free advertise</h3>
                 <p>We love the Big Add!</p>
               </div>
-            </div>
+            </div> -->
 
-            <div class="item">
-              <div class="col-sm-12  video-set">
+            <!-- <div class="item">
+              <div class="col-sm-12  video-set"> -->
                 <!-- <iframe width="100%" height="300px" autoplay muted loop src="https://www.youtube.com/embed/XEHjCYQCS4k?autoplay=1" frameborder="0" allow="autoplay; encrypted-media"
                   allowfullscreen></iframe> -->
-                <video src="assets/time3.webm" autoplay="1" type="video/mp4" width="100%" height="300px" controls loop></video>
+                <!-- <video src="assets/time3.webm" autoplay="1" type="video/mp4" width="100%" height="300px" controls loop></video>
 
               </div>
             </div>
@@ -119,10 +121,10 @@
         </div>
         <div class="col-sm-6">
           <video src="assets/time2.mp4" autoplay="repeat" controls loop type="video/mp4" width="100%" height="300px"></video>
-        </div>
+        </div> -->
 
 
-      </div>
+      <!-- </div> -->
 
       <!-- Left and right controls -->
 

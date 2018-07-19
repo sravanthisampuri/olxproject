@@ -8,11 +8,9 @@ import { FormsModule, NgForm, FormControl } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
   data;
-  logfilter = {
-    states: ''
-  }
-  public search :any;
-  public countries =[];
+  public country: any=[];
+  // public filtering : boolean=false;
+  
   public citiesdata: any = ["Ahmedabad", "Bengaluru", "Chandigarh", "Chennai", "Coimbatore", "Delhi",
     "Gurgaon", "Hyderabad", "Jaipur", "Kochi", "Kolkata", "Lucknow", "Ludhiana", "Mumbai", "Nagpur", "Pune", "Surat",
     "Thiruvananthapuram"];
@@ -32,12 +30,11 @@ export class HomeComponent implements OnInit {
     "assets/images/olx4.gif", "assets/images/olx5.gif", "assets/images/olx6.gif"];
   public display: any = ["assets/images/olx.gif"];
   public i: any = 1;
-  public filteredData = [];
-  public citylen: any;
+  public search: any;
   constructor() { }
 
   ngOnInit() {
-    this.countries = this.statesdata.concat(this.citiesdata)
+    this.country = this.citiesdata.concat(this.statesdata);
   }
   myclick() {
     this.i < this.url.length ? this.display = this.url[this.i] : this.url[this.i = 0];

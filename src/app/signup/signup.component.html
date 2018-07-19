@@ -24,7 +24,7 @@
 					    <div [hidden]="email.valid" class="alert alert-info">Please enter a valid email </div>
           <div class="form-group input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input name="number" class="form-control" placeholder="Phone number" type="text">
+              <input name="number" value="+91" class="form-control" placeholder="Phone number" type="text">
           </div>
           <!-- form-group end -->
           <div ngModelGroup="password" #userPassword="ngModelGroup" minlength="8" required>
@@ -36,8 +36,10 @@
               <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
               <input id="confirmPassword" [(ngModel)]="userdata.conpassword" type="password" class="form-control" name="conpwd" placeholder="confirm password" minlength="8" required>
           </div>
+         
           <div *ngIf="(userPassword.invalid|| userPassword.value?.pword != userPassword.value?.conpwd) && (userPassword.touched)" class="alert alert-info">
-							<div *ngIf="userPassword.invalid; else nomatch">
+            {{userPassword.value?.pword+userPassword.value?.conpwd}}  
+            <div *ngIf="userPassword.invalid; else nomatch">
 								Password must be more than 8 characters
 							</div>
 							<ng-template #nomatch>

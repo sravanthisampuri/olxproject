@@ -36,6 +36,8 @@ import { loginServices } from './login.services';
 import { HttpClientModule } from '@angular/common/http';
 import{ FilterPipe} from './app.filter';
 import { MyaccountComponent } from './myaccount/myaccount.component';
+import { RegisterService } from './register.service';
+
 
 
 
@@ -94,6 +96,7 @@ const routes: Routes = ([
     CarSaleComponent,
     FilterPipe,
     MyaccountComponent
+    
 
   ],
   imports: [
@@ -108,7 +111,7 @@ const routes: Routes = ([
     MatTabsModule,
     HttpClientModule
   ],
-  providers: [loginServices,SubmitAddService],
+  providers: [loginServices,SubmitAddService,RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
