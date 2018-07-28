@@ -17,6 +17,7 @@ loginData={
   
 
 };
+data
 public udata : any;
 public profile:any;
 
@@ -39,16 +40,27 @@ loginUser(){
 
    else{
     this.LoginServices.SubmitLogin(this.udata)
-
     .subscribe(
           function(response){
             console.log(response)
-          }
+            this.data=response;
+            this.data=this.data.user;
+          
+        this.getUsrDetails();
+          } 
         )
-     
     this.route.navigate(['']);
    }
    
+  }
+
+  getUsrDetails(){
+    this.LoginServices.getDetails(this.data)
+    .subscribe(
+      function(response){
+        console.log(response)
+      }
+    )
   }
 
   // onSignIn(googleUser){

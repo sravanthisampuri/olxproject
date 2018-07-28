@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule, NgForm, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   data;
-  public combineddata: any
+  public country: any=[];
   // public filtering : boolean=false;
+  
   public citiesdata: any = ["Ahmedabad", "Bengaluru", "Chandigarh", "Chennai", "Coimbatore", "Delhi",
     "Gurgaon", "Hyderabad", "Jaipur", "Kochi", "Kolkata", "Lucknow", "Ludhiana", "Mumbai", "Nagpur", "Pune", "Surat",
     "Thiruvananthapuram"];
@@ -21,15 +23,18 @@ export class HomeComponent implements OnInit {
     "Telangana", "Tripura", "Uttar Pradesh", "Uttaranchal", "West Bengal"];
 
   public textfield: any;
+
+
   public locationSearch: boolean = false;
   public url: any = ["assets/images/olx.gif", "assets/images/olx1.gif", "assets/images/olx3.gif",
     "assets/images/olx4.gif", "assets/images/olx5.gif", "assets/images/olx6.gif"];
   public display: any = ["assets/images/olx.gif"];
-  public i: any = 1;  
+  public i: any = 1;
   public search: any;
   constructor() { }
 
   ngOnInit() {
+    this.country = this.citiesdata.concat(this.statesdata);
   }
   myclick() {
     this.i < this.url.length ? this.display = this.url[this.i] : this.url[this.i = 0];
@@ -37,6 +42,7 @@ export class HomeComponent implements OnInit {
   }
 
   displayCities() {
+
     this.locationSearch = true;
 
   }

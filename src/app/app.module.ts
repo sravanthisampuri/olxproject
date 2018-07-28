@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { TabsModule } from 'ngx-bootstrap';
 import { BsDropdownModule } from 'ngx-bootstrap';
+import { AuthGaurd } from './app.authgaurd';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -29,13 +30,15 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { SubmitAdComponent } from './submit-ad/submit-ad.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { LoginService } from './app.service';
+import { SubmitAddService } from './submitAdd.service';
 import { CarSaleComponent } from './car-sale/car-sale.component';
 import { loginServices } from './login.services';
 import { HttpClientModule } from '@angular/common/http';
 import{ FilterPipe} from './app.filter';
 import { MyaccountComponent } from './myaccount/myaccount.component';
-import { SubmitAddService } from './submitAdd.service';
+import { RegisterService } from './register.service';
+
+
 
 
 
@@ -93,6 +96,7 @@ const routes: Routes = ([
     CarSaleComponent,
     FilterPipe,
     MyaccountComponent
+    
 
   ],
   imports: [
@@ -107,7 +111,7 @@ const routes: Routes = ([
     MatTabsModule,
     HttpClientModule
   ],
-  providers: [LoginService,loginServices,SubmitAddService],
+  providers: [loginServices,SubmitAddService,RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

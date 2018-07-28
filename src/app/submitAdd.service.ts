@@ -11,5 +11,8 @@ export class SubmitAddService {
     submitAdd(addDetails){
         return this.http.post( "http://localhost:3001/v1/add/createAdd" , addDetails )
     }
+    submitAddget(){
+        return 
+    }
 
 }

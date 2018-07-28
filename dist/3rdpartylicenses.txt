@@ -118,6 +118,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 MIT
 MIT
 
+@angular/forms@5.2.11
+MIT
+MIT
+
 @angular/common@5.2.11
 MIT
 MIT
@@ -127,10 +131,6 @@ MIT
 MIT
 
 @angular/router@5.2.11
-MIT
-MIT
-
-@angular/forms@5.2.11
 MIT
 MIT
 
